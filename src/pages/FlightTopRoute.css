@@ -1,0 +1,71 @@
+/* src/pages/FlightTopRoute.css */
+
+.route-container {
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.route-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.route-header button {
+  padding: 8px 14px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.route-header button:hover {
+  background-color: #0056b3;
+}
+
+.route-form {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  background: #f7f7f7;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.route-form input,
+.route-form select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.route-form button {
+  grid-column: span 2;
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.route-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.route-table th,
+.route-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.route-table th {
+  background-color: #e9ecef;
+  font-weight: bold;
+}

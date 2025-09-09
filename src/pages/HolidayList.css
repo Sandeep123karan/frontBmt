@@ -1,0 +1,83 @@
+.holiday-container {
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn.add-btn {
+  padding: 8px 16px;
+  background-color: #0052cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn.add-btn:hover {
+  background-color: #003d99;
+}
+
+.holiday-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.holiday-form input,
+.holiday-form select,
+.holiday-form button {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.holiday-form button {
+  grid-column: span 2;
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.holiday-form button:hover {
+  background-color: darkgreen;
+}
+
+.holiday-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.holiday-table th,
+.holiday-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.holiday-table th {
+  background-color: #f0f0f0;
+}
+
+.holiday-table button {
+  padding: 4px 8px;
+  margin: 0 4px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.holiday-table button:hover {
+  opacity: 0.8;
+}

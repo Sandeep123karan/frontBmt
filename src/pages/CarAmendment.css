@@ -1,0 +1,138 @@
+.car-amendment-container {
+  padding: 20px;
+  background: #f5f7fa;
+  font-family: 'Inter', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.header h2 {
+  color: #333;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.header button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.header button:hover {
+  background-color: #0056b3;
+}
+
+.amendment-form {
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.amendment-form .form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.amendment-form input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.amendment-form button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.amendment-form button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+.amendment-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.amendment-table th, .amendment-table td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #e2e2e2;
+  font-size: 14px;
+}
+
+.amendment-table th {
+  background-color: #f1f3f5;
+  color: #333;
+  font-weight: 600;
+}
+
+.amendment-table td {
+  color: #555;
+}
+
+.amendment-table td button {
+  padding: 4px 8px;
+  font-size: 13px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.amendment-table td button:first-child {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.amendment-table td button:first-child:hover {
+  background-color: #e0a800;
+}
+
+.amendment-table td button:last-child {
+  background-color: #dc3545;
+  color: white;
+}
+
+.amendment-table td button:last-child:hover {
+  background-color: #c82333;
+}
+
+@media screen and (max-width: 768px) {
+  .amendment-form .form-row {
+    flex-direction: column;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+}

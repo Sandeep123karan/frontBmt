@@ -1,0 +1,66 @@
+.property-type-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.property-type-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.property-type-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.property-type-form input,
+.property-type-form button {
+  padding: 8px;
+  font-size: 14px;
+}
+
+.property-type-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 0 5px #ccc;
+}
+
+.property-type-table th,
+.property-type-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.status-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+.status-badge.active {
+  background-color: green;
+}
+
+.status-badge.inactive {
+  background-color: red;
+}
+
+button {
+  cursor: pointer;
+  padding: 5px 10px;
+  background: #0066ff;
+  border: none;
+  color: white;
+  border-radius: 4px;
+}
+
+button:hover {
+  background: #0047b3;
+}

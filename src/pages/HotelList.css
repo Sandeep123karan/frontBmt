@@ -1,0 +1,38 @@
+.hotel-list-container {
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.city-input {
+  padding: 8px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  width: 300px;
+  display: block;
+}
+
+.hotel-table {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.hotel-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.hotel-row.header {
+  background: #f0f0f0;
+  font-weight: bold;
+  border-top: none;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}

@@ -1,0 +1,39 @@
+.live-flight-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.search-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-controls input {
+  padding: 8px;
+  width: 180px;
+}
+
+.search-controls button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.flight-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.flight-table th,
+.flight-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.flight-table th {
+  background-color: #f4f4f4;
+}

@@ -1,0 +1,34 @@
+.airline-replace {
+  padding: 20px;
+  font-family: sans-serif;
+}
+.form {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 30px;
+}
+.form input, .form button {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+.form button {
+  background: #007bff;
+  color: white;
+  border: none;
+  grid-column: span 3;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table th, .table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+.table td button {
+  margin: 0 3px;
+  padding: 4px 8px;
+}

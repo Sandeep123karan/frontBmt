@@ -1,0 +1,40 @@
+.theme-container {
+  padding: 20px;
+  background: #fff;
+}
+
+.top-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.theme-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.theme-table th,
+.theme-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.theme-table img {
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.active {
+  background-color: green;
+  color: white;
+  padding: 5px;
+}
+
+.inactive {
+  background-color: red;
+  color: white;
+  padding: 5px;
+}

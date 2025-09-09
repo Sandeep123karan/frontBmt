@@ -1,0 +1,28 @@
+.hotel-booking-wrapper {
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.filters input,
+.filters select,
+.filters button {
+  padding: 6px;
+}
+
+.booking-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.booking-table th,
+.booking-table td {
+  border: 1px solid #ccc;
+  padding: 6px;
+  text-align: center;
+}

@@ -1,0 +1,31 @@
+.ticket-import-container {
+  padding: 20px;
+  background: #f1f6fb;
+}
+
+.ticket-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.ticket-form input,
+.ticket-form select {
+  width: calc(50% - 10px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.ticket-form button {
+  background: #004aad;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}

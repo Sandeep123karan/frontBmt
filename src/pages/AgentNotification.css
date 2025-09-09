@@ -1,0 +1,55 @@
+.notify-container {
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.notify-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notify-topbar input, .notify-topbar select {
+  margin-right: 10px;
+  padding: 6px;
+}
+
+.notify-filters {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.notify-table {
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.notify-table th, .notify-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.notify-table button {
+  padding: 4px 8px;
+  font-size: 14px;
+  cursor: pointer;
+  background: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.notify-form {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.notify-form input, .notify-form select {
+  padding: 6px;
+}

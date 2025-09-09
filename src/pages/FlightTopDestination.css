@@ -1,0 +1,109 @@
+.destination-container {
+  padding: 20px;
+  background: #f9f9f9;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+.top-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-add {
+  background-color: #1d4ed8;
+  color: white;
+}
+
+.btn-status {
+  background-color: #64748b;
+  color: white;
+}
+
+.btn-delete {
+  background-color: #dc2626;
+  color: white;
+}
+
+.btn-save {
+  background-color: #059669;
+  color: white;
+  margin-top: 10px;
+}
+
+.btn-small {
+  font-size: 12px;
+  padding: 4px 8px;
+  margin-right: 4px;
+}
+
+.btn-danger {
+  background-color: #ef4444;
+  color: white;
+}
+
+.form-box {
+  background-color: #ffffff;
+  padding: 16px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.destination-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.destination-table th,
+.destination-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.destination-table th {
+  background-color: #e2e8f0;
+}
+
+.thumb {
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.status {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.status.active {
+  background-color: #22c55e;
+  color: white;
+}
+
+.status.inactive {
+  background-color: #f97316;
+  color: white;
+}

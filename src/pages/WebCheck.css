@@ -1,0 +1,54 @@
+.webcheck-container {
+  padding: 20px;
+  font-family: sans-serif;
+  background: #f9fafb;
+}
+
+.webcheck-form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.webcheck-form input, .webcheck-form button {
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.webcheck-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  grid-column: span 4;
+}
+
+.webcheck-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.webcheck-table th, .webcheck-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.edit-btn {
+  background-color: #ffc107;
+  color: #000;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border: none;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+}
+    

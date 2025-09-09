@@ -1,0 +1,44 @@
+.car-setting {
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.car-setting-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.car-setting-header input {
+  padding: 8px;
+  width: 250px;
+}
+
+.car-setting-header button {
+  padding: 8px 12px;
+  background-color: #0088ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form input {
+  padding: 6px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}

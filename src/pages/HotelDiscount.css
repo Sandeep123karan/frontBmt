@@ -1,0 +1,23 @@
+.hotel-discount-wrapper {
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.hotel-form input,
+.hotel-form button {
+  margin: 5px;
+  padding: 8px;
+}
+
+.discount-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.discount-table th,
+.discount-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}

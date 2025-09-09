@@ -1,0 +1,57 @@
+.coupon-log-container {
+  padding: 20px;
+  font-family: Inter, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.coupon-log-container h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.coupon-log-table-wrapper {
+  overflow-x: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.coupon-log-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+.coupon-log-table th,
+.coupon-log-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  font-size: 14px;
+}
+
+.coupon-log-table th {
+  background-color: #f1f1f1;
+  font-weight: 600;
+  color: #444;
+}
+
+.coupon-log-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.delete-btn {
+  background-color: #e53935;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: #c62828;
+}

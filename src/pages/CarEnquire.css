@@ -1,0 +1,58 @@
+.car-enquire-container {
+  padding: 20px;
+  background: #f4f7fa;
+  font-family: 'Inter', sans-serif;
+}
+
+.car-enquire-container h2 {
+  margin-bottom: 20px;
+  color: #005ea5;
+}
+
+.filter-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.filter-box select,
+.filter-box input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.filter-box button {
+  background: black;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th, td {
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #0072ce;
+  color: white;
+}
+
+button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}

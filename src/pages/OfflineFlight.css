@@ -1,0 +1,68 @@
+.offline-flight-container {
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.offline-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+  margin-bottom: 30px;
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.offline-form input,
+.offline-form select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.offline-form button {
+  grid-column: span 2;
+  padding: 10px;
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.offline-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.offline-table th,
+.offline-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.active-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: none;
+}
+
+.inactive-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: none;
+}
+
+.delete-btn {
+  color: red;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

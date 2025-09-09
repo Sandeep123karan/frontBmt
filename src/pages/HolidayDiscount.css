@@ -1,0 +1,45 @@
+.discount-container {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.discount-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.discount-form input,
+.discount-form select {
+  padding: 6px 10px;
+  width: 180px;
+}
+
+.discount-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.discount-table th,
+.discount-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.active {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.inactive {
+  background-color: #dc3545;
+  color: #fff;
+}

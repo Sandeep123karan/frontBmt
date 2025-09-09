@@ -1,0 +1,44 @@
+.airline-container {
+  padding: 20px;
+}
+
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filters input {
+  padding: 8px;
+  width: 250px;
+}
+
+.actions .btn {
+  padding: 8px 16px;
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.airline-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.airline-table th, .airline-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.loading, .error, .no-results {
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.pagination {
+  margin-top: 10px;
+  text-align: right;
+}
