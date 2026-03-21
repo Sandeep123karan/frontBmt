@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./CarSetting.css";
 
-const API = "https://bmt-backend-1-vq3f.onrender.com/api/admin/car-settings";
+const API = "http://localhost:9000/api/admin/car-settings";
 
 function CarSetting() {
   const [form, setForm] = useState({ cityName: "", supplier: "", status: true });

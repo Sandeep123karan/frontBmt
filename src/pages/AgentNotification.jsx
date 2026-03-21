@@ -21,7 +21,7 @@ const AgentNotification = () => {
       if (filterStatus) {
         params.status = filterStatus;
       }
-      const res = await axios.get('https://bmt-backend-1-vq3f.onrender.com/api/notifications', { params });
+      const res = await axios.get('http://localhost:9000/api/notifications', { params });
       setNotifications(res.data);
     } catch (err) {
       console.error(err);
@@ -32,10 +32,10 @@ const AgentNotification = () => {
     if (!form.title) return;
     try {
       if (editId) {
-        await axios.put(`https://bmt-backend-1-vq3f.onrender.com/api/notifications/${editId}`, form);
+        await axios.put(`http://localhost:9000/api/notifications/${editId}`, form);
         setEditId(null);
       } else {
-        await axios.post('https://bmt-backend-1-vq3f.onrender.com/api/notifications', form);
+        await axios.post('http://localhost:9000/api/notifications', form);
       }
       setForm({ title: '', type: 'Info' });
       setShowForm(false);
@@ -47,7 +47,7 @@ const AgentNotification = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://bmt-backend-1-vq3f.onrender.com/api/notifications/${id}`);
+      await axios.delete(`http://localhost:9000/api/notifications/${id}`);
       fetchNotifications();
     } catch (err) {
       console.error(err);
@@ -63,7 +63,7 @@ const AgentNotification = () => {
   const handleStatusChange = async (status) => {
     try {
       const ids = notifications.map(n => n._id);
-      await axios.put('https://bmt-backend-1-vq3f.onrender.com/api/notifications/status', { ids, status });
+      await axios.put('http://localhost:9000/api/notifications/status', { ids, status });
       fetchNotifications();
     } catch (err) {
       console.error(err);

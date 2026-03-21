@@ -1,0 +1,162 @@
+/* Page Container */
+.visa-container {
+  width: 90%;
+  max-width: 950px;
+  margin: 40px auto;
+  background: linear-gradient(145deg, #ffffff, #f7f7f7);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease-in-out;
+}
+
+/* Heading */
+.visa-container h1 {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 32px;
+  font-weight: 600;
+  color: #222;
+  letter-spacing: 0.5px;
+}
+
+/* Form Styles */
+.visa-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 35px;
+}
+
+.visa-form input {
+  flex: 1 1 48%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  font-size: 16px;
+  transition: all 0.25s ease;
+}
+
+.visa-form input:hover {
+  background: #fff;
+  border-color: #007bff;
+}
+
+.visa-form input:focus {
+  border-color: #0067d6;
+  background: #fff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.35);
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: #007bff;
+  color: white;
+  font-size: 17px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.25s ease;
+  font-weight: 500;
+}
+
+.submit-btn:hover {
+  background: #005fcc;
+}
+
+/* Data Section */
+.visa-data-wrapper {
+  margin-top: 35px;
+}
+
+.visa-data-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* List Container */
+.visa-list {
+  padding: 0;
+  margin: 0;
+}
+
+/* Single Card Item */
+.visa-item {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+  border: 1px solid #eee;
+  transition: 0.25s ease;
+}
+
+.visa-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+}
+
+/* Card Title */
+.visa-item-header {
+  font-size: 19px;
+  font-weight: 600;
+  color: #007bff;
+  margin-bottom: 12px;
+}
+
+/* Grid inside card */
+.visa-item-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 10px;
+  column-gap: 20px;
+  margin-bottom: 15px;
+}
+
+.visa-item-label {
+  font-weight: 600;
+  color: #222;
+}
+
+.visa-item-grid div {
+  font-size: 16px;
+  color: #444;
+}
+
+/* Delete Button */
+.delete-btn {
+  padding: 10px 14px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  font-size: 14px;
+}
+
+.delete-btn:hover {
+  background: #b02a37;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .visa-form input {
+    flex: 1 1 100%;
+  }
+
+  .visa-item-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .visa-item {
+    padding: 18px;
+  }
+}

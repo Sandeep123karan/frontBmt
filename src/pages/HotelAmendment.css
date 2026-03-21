@@ -1,4 +1,4 @@
-.hotel-amendment-container {
+/* .hotel-amendment-container {
   padding: 20px;
   font-family: "Poppins", sans-serif;
 }
@@ -26,4 +26,188 @@
   border: 1px solid #ccc;
   padding: 6px;
   text-align: center;
+} */
+/* ======================================================
+   MAIN CONTAINER
+====================================================== */
+.hotel-amendment-container {
+  padding: 20px;
+  max-width: 1400px;
+  margin: auto;
+  font-family: "Poppins", sans-serif;
+}
+
+.hotel-amendment-container h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* ======================================================
+   FILTER SECTION
+====================================================== */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.filters select,
+.filters input,
+.filters button {
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #d5d5d5;
+  border-radius: 6px;
+}
+
+.filters button {
+  cursor: pointer;
+  background: #0a66c2;
+  color: white;
+  border: none;
+  transition: 0.2s ease;
+}
+
+.filters button:hover {
+  background: #004a96;
+}
+
+/* ======================================================
+   FORM SECTION
+====================================================== */
+.amendment-form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 15px;
+  background: #f7f9fc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.amendment-form input {
+  padding: 8px;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.amendment-form button {
+  grid-column: span 4;
+  padding: 10px;
+  background: #28a745;
+  border: none;
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.amendment-form button:hover {
+  background: #218838;
+}
+
+/* ======================================================
+   TABLE (DESKTOP MODE)
+====================================================== */
+.amendment-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.amendment-table th,
+.amendment-table td {
+  border: 1px solid #e6e6e6;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.amendment-table th {
+  background: #f1f3f7;
+  font-weight: 600;
+}
+
+/* Hover Row */
+.amendment-table tr:hover {
+  background: #f9fbff;
+}
+
+/* Action Buttons */
+.amendment-table button {
+  padding: 5px 8px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  background: none;
+}
+
+.amendment-table button:hover {
+  opacity: 0.7;
+}
+
+/* ======================================================
+   RESPONSIVE TABLE (MOBILE VIEW)
+====================================================== */
+@media (max-width: 900px) {
+  .amendment-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  .amendment-form {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* Hide desktop header */
+  .amendment-table thead {
+    display: none;
+  }
+
+  .amendment-table,
+  .amendment-table tbody,
+  .amendment-table tr,
+  .amendment-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .amendment-table tr {
+    margin-bottom: 15px;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #eee;
+  }
+
+  .amendment-table td {
+    text-align: left;
+    padding: 8px 5px;
+    border: none;
+    border-bottom: 1px solid #f1f1f1;
+    position: relative;
+  }
+
+  .amendment-table td:last-child {
+    border-bottom: none;
+  }
+
+  .amendment-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 3px;
+    font-size: 13px;
+    color: #444;
+  }
 }

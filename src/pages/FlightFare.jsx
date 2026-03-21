@@ -20,7 +20,7 @@
 
 //   const fetchFares = async () => {
 //     try {
-//       const response = await axios.get('https://bmt-backend-1-vq3f.onrender.com/api/fares');
+//       const response = await axios.get('http://localhost:9000/api/fares');
 //       setFares(response.data);
 //     } catch (error) {
 //       console.error('Error fetching fares:', error.message);
@@ -30,9 +30,9 @@
 //   const handleSave = async () => {
 //     try {
 //       if (editId) {
-//         await axios.put(`https://bmt-backend-1-vq3f.onrender.com/api/fares/${editId}`, formData);
+//         await axios.put(`http://localhost:9000/api/fares/${editId}`, formData);
 //       } else {
-//         await axios.post('https://bmt-backend-1-vq3f.onrender.com/api/fares', formData);
+//         await axios.post('http://localhost:9000/api/fares', formData);
 //       }
 //       setFormData({ supplierFareType: '', apiFareType: '', apiSupplier: 'TBO' });
 //       setFormVisible(false);
@@ -51,7 +51,7 @@
 
 //   const handleDelete = async (id) => {
 //     try {
-//       await axios.delete(`https://bmt-backend-1-vq3f.onrender.com/api/fares/${id}`);
+//       await axios.delete(`http://localhost:9000/api/fares/${id}`);
 //       fetchFares();
 //     } catch (err) {
 //       console.error('Error deleting fare:', err.message);

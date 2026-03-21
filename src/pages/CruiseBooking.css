@@ -1,0 +1,119 @@
+.cb-container {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+.cb-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cb-btn-add {
+  background: #0077ff;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.cb-btn-add:hover {
+  background: #005dc2;
+}
+
+/* FORM */
+.cb-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.cb-form input,
+.cb-form select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.cb-btn-save {
+  grid-column: span 2;
+  background: #28a745;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.cb-btn-save:hover {
+  background: #1f7e34;
+}
+
+/* TABLE */
+.cb-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cb-table th {
+  background: #f2f2f2;
+  padding: 12px;
+  border-bottom: 2px solid #ddd;
+  text-align: center;
+    color: #000 !important;
+}
+
+.cb-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.cb-table tr:hover {
+  background: #fafafa;
+}
+
+.cb-status-confirmed {
+  color: green;
+  font-weight: 600;
+}
+
+.cb-status-pending {
+  color: orange;
+  font-weight: 600;
+}
+
+.cb-status-cancelled {
+  color: red;
+  font-weight: 600;
+}
+
+/* ACTION BUTTONS */
+.cb-btn-edit {
+  background: #ffb400;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  margin-right: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.cb-btn-delete {
+  background: #e60000;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.cb-empty {
+  padding: 20px;
+  color: #555;
+  font-size: 16px;
+}

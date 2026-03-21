@@ -10,7 +10,7 @@
 //   const [searchTerm, setSearchTerm] = useState('');
 
 //   const fetchAirports = () => {
-//     axios.get('https://bmt-backend-1-vq3f.onrender.com/api/airports')
+//     axios.get('http://localhost:9000/api/airports')
 
 //       .then(res => setAirports(res.data))
 //       .catch(err => console.error("Error fetching airports:", err));
@@ -106,7 +106,7 @@ const FlightAirportList = () => {
 
   const fetchAirports = async () => {
     try {
-      const res = await axios.get('https://bmt-backend-1-vq3f.onrender.com/api/airports');
+      const res = await axios.get('http://localhost:9000/api/airports');
       setAirports(res.data);
       setLoading(false);
     } catch (err) {

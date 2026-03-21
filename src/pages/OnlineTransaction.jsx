@@ -15,7 +15,7 @@ const OnlineTransaction = () => {
 
   const getData = async () => {
     try {
-      const res = await axios.get("https://bmt-backend-1-vq3f.onrender.com/api/online-transactions");
+      const res = await axios.get("http://localhost:9000/api/online-transactions");
       setTransactions(res.data);
     } catch (err) {
       console.error("❌ Error fetching transactions:", err.message);

@@ -10,7 +10,7 @@
 //   const handleSubmit = async e => {
 //     e.preventDefault();
 //     try {
-//       const res = await axios.post('https://bmt-backend-1-vq3f.onrender.com/api/users/register', form);
+//       const res = await axios.post('http://localhost:9000/api/users/register', form);
 //       setMessage(res.data.message);
 //     } catch (err) {
 //       setMessage(err.response?.data?.message || 'Error');

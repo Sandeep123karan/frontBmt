@@ -21,7 +21,7 @@ function HolidayQueryList() {
   });
 
   const fetchData = async () => {
-    const res = await axios.get("https://bmt-backend-1-vq3f.onrender.com/api/holiday-query");
+    const res = await axios.get("http://localhost:9000/api/holiday-query");
     setData(res.data);
   };
 
@@ -35,9 +35,9 @@ function HolidayQueryList() {
 
   const handleSubmit = async () => {
     if (editId) {
-      await axios.put(`https://bmt-backend-1-vq3f.onrender.com/api/holiday-query/${editId}`, form);
+      await axios.put(`http://localhost:9000/api/holiday-query/${editId}`, form);
     } else {
-      await axios.post("https://bmt-backend-1-vq3f.onrender.com/api/holiday-query", form);
+      await axios.post("http://localhost:9000/api/holiday-query", form);
     }
     setForm({
       webPartner: "",
@@ -63,7 +63,7 @@ function HolidayQueryList() {
   };
 
   const handleDelete = async (id) => {
-    await axios.delete(`https://bmt-backend-1-vq3f.onrender.com/api/holiday-query/${id}`);
+    await axios.delete(`http://localhost:9000/api/holiday-query/${id}`);
     fetchData();
   };
 

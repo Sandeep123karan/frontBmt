@@ -19,7 +19,7 @@ const UserManagement = () => {
     }
 
     axios
-      .get('https://bmt-backend-1-vq3f.onrender.com/api/users', {
+      .get('http://localhost:9000/api/users', {
         headers: {
           Authorization: `Bearer ${token}`,
         },

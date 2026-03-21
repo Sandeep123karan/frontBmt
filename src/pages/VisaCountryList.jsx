@@ -8,9 +8,9 @@ function VisaCountryList() {
   const [newCountry, setNewCountry] = useState({ name: "", iso2: "" });
   const [updateCountry, setUpdateCountry] = useState({ id: "", name: "", iso2: "" });
 
-  const API_URL = "https://bmt-backend-1-vq3f.onrender.com/api/visa-countries"; // backend URL
+  const API_URL = "http://localhost:9000/api/visa-countries"; 
 
-  // Fetch all countries
+  
   const fetchCountries = async () => {
     try {
       setLoading(true);

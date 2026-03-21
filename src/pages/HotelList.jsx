@@ -1,3 +1,77 @@
+
+// import React, { useState, useEffect } from "react";
+// import axios from "axios";
+// import "./HotelList.css";
+
+// function HotelList() {
+//   const [hotels, setHotels] = useState([]);
+//   const [loading, setLoading] = useState(false);
+//   const [error, setError] = useState("");
+
+//   // Fetch hotels from your own database
+//   const fetchHotels = async () => {
+//     try {
+//       setLoading(true);
+//       setError("");
+
+//       const res = await axios.get("http://localhost:9000/api/hotels");
+
+//       setHotels(res.data);
+
+//     } catch (err) {
+//       console.error(err);
+//       setError("❌ Failed to load hotels from database.");
+//     } finally {
+//       setLoading(false);
+//     }
+//   };
+
+//   useEffect(() => {
+//     fetchHotels();
+//   }, []);
+
+//   return (
+//     <div className="hotel-list-container">
+//       <h2>🏨 Saved Hotels List</h2>
+
+//       {/* Loading */}
+//       {loading && <p className="loading">⏳ Loading hotels...</p>}
+
+//       {/* Error */}
+//       {error && <p className="error">{error}</p>}
+
+//       {/* No Data */}
+//       {!loading && hotels.length === 0 && !error && (
+//         <p className="no-data">No hotels found in database.</p>
+//       )}
+
+//       {/* Table */}
+//       {hotels.length > 0 && (
+//         <div className="hotel-table">
+//           <div className="hotel-row header">
+//             <span>Hotel Name</span>
+//             <span>City</span>
+//             <span>Property Type</span>
+//             <span>Star Rating</span>
+//             <span>Status</span>
+//           </div>
+
+//           {hotels.map((hotel, index) => (
+//             <div className="hotel-row" key={index}>
+//               <span>{hotel.hotelName || "N/A"}</span>
+//               <span>{hotel.city || "-"}</span>
+//               <span>{hotel.propertyType || "-"}</span>
+//               <span>{hotel.starRating || "0"}</span>
+//               <span>{hotel.status || "active"}</span>
+//             </div>
+//           ))}
+//         </div>
+//       )}
+//     </div>
+//   );
+// }
+
+// export default HotelList;
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./HotelList.css";
@@ -5,17 +79,19 @@ import "./HotelList.css";
 function HotelList() {
   const [hotels, setHotels] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [cityCode, setCityCode] = useState("PAR"); // default: Paris
   const [error, setError] = useState("");
 
   const fetchHotels = async () => {
     try {
       setLoading(true);
-      const res = await axios.get(`https://bmt-backend-1-vq3f.onrender.com/api/global-hotels?cityCode=${cityCode}`);
-      setHotels(res.data.data); // Amadeus gives data in res.data.data
+      setError("");
+
+      const res = await axios.get("http://localhost:9000/api/hotels");
+      setHotels(res.data);
+
     } catch (err) {
-      setError("Failed to fetch hotels.");
       console.error(err);
+      setError("❌ Failed to load hotels.");
     } finally {
       setLoading(false);
     }
@@ -23,36 +99,44 @@ function HotelList() {
 
   useEffect(() => {
     fetchHotels();
-  }, [cityCode]);
+  }, []);
 
   return (
     <div className="hotel-list-container">
-      <h2>🌍 Global Hotel List</h2>
-      <input
-        type="text"
-        placeholder="Enter city code (e.g. NYC, PAR)"
-        value={cityCode}
-        onChange={(e) => setCityCode(e.target.value.toUpperCase())}
-        className="city-input"
-      />
+      <h2>🏨 Saved Hotels List</h2>
 
-      {loading ? <p>Loading...</p> : null}
+      {loading && <p className="loading">⏳ Loading hotels...</p>}
       {error && <p className="error">{error}</p>}
 
-      <div className="hotel-table">
-        <div className="hotel-row header">
-          <span>Name</span>
-          <span>City Code</span>
-          <span>Hotel Id</span>
-        </div>
-        {hotels.map((hotel, index) => (
-          <div className="hotel-row" key={index}>
-            <span>{hotel.name}</span>
-            <span>{hotel.cityCode}</span>
-            <span>{hotel.hotelId}</span>
+      {hotels.length === 0 && !loading && !error && (
+        <p className="no-data">No hotels found.</p>
+      )}
+
+      {hotels.length > 0 && (
+        <div className="hotel-table">
+
+          {/* HEADER */}
+          <div className="hotel-row header">
+            <span>Hotel Name</span>
+            <span>City</span>
+            <span>Property Type</span>
+            <span>Star Rating</span>
+            <span>Status</span>
           </div>
-        ))}
-      </div>
+
+          {/* ROWS */}
+          {hotels.map((hotel, index) => (
+            <div className="hotel-row" key={index}>
+              <span data-label="Hotel Name">{hotel.hotelName}</span>
+              <span data-label="City">{hotel.city}</span>
+              <span data-label="Property Type">{hotel.propertyType}</span>
+              <span data-label="Star Rating">{hotel.starRating}</span>
+              <span data-label="Status">{hotel.status}</span>
+            </div>
+          ))}
+
+        </div>
+      )}
     </div>
   );
 }

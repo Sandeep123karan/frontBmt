@@ -9,6 +9,9 @@ import Dashboard from './pages/Dashboard';
 import SocialLogin from './pages/SocialLogin';
 import Flights from './pages/Flights';
 import Hotels from './pages/Hotels';
+import AdminPayments from "./pages/AdminPayments";
+import ProtectedRoute from "./components/ProtectedRoute";
+
 
 // Settings dropdown imports
 import Setting from './pages/Setting';
@@ -54,7 +57,7 @@ import HotelBookingList from './pages/HotelBookingList';
 import HotelAmendment from './pages/HotelAmendment';
 import HotelUploads from './pages/HotelUploads';
 import HotelCoupon from './pages/HotelCoupon';
-import AddHotel from './pages/AddHotel';
+import AddHotel from './pages/AddHotel';  
 import HotelList from './pages/HotelList';
 import HotelSettings from './pages/HotelSettings';
 
@@ -146,6 +149,32 @@ import ActivityList from './pages/ActivityList';
 import AddCruise from './pages/AddCruise';
 import ManageCruise from './pages/ManageCruise';
 import CruiseBooking from './pages/CruiseBooking';
+import ClubMembers from './pages/ClubMembers';
+import ClubBookings from './pages/ClubBookings';
+import ClubPayments from './pages/ClubPayments';
+import ClubEvents from './pages/ClubEvents';
+import DarshanManagement from './pages/DarshanManagement';
+import AdminDarshanBookings from './pages/AdminDarshanBookings';
+import BusAdminPanel from "./pages/BusAdminPanel";
+import ApartmentManagement from "./pages/ApartmentManagement";
+import Resortmanagement from "./pages/Resortmanagement";
+import Loungemanagement from "./pages/Loungemanagement";
+import Guesthousemanagement from "./pages/Guesthousemanagement";
+import Homestaymanagement from "./pages/Homestaymanagement";
+import Placemanagement from './pages/Placemanagement';
+import Houseboatmanagement from './pages/Houseboatmanagement';
+import Motelmanagement from "./pages/Motelmanagement";
+import Hostelmanagement from "./pages/Hostelmanagement";
+import Campsitepage from './pages/Campsitepage';
+import Lovehotelpanel from "./pages/Lovehotelpanel";
+import Holidayparkpanel from "./pages/Holidayparkpanel";
+import Farmstayadmin from "./pages/Farmstayadmin"; 
+import Vacationhouseadmin from "./pages/Vacationhouseadmin";
+import Campsitebooking from "./pages/Campsitebooking";
+import Holidayparkapp from "./pages/Holidayparkapp";
+import Motelbookingapp from "./pages/Motelbookingapp";
+
+
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem("isLoggedIn") === "true");
@@ -162,8 +191,11 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<AuthPage />} />
+        
         {isLoggedIn ? (
           <Route path="/admin" element={<AdminSettingsLayout />}>
+            <Route element={<ProtectedRoute />}></Route>
+      <Route path="payments" element={<AdminPayments />} />
             <Route path="dashboard" element={<Dashboard />} />
             
             {/* Settings Routes */}
@@ -181,6 +213,7 @@ function App() {
             {/* Account Management Routes */}
             <Route path="AgentPaymentHistory" element={<AgentPaymentHistory />} />
             <Route path="online-transaction" element={<OnlineTransaction />} />
+            <Route path="payments" element={<AdminPayments />} />
 
             {/* Flight Management Routes */}
             <Route path="flights/markup" element={<FlightMarkup />} />
@@ -308,6 +341,52 @@ function App() {
             {/* Page Management Routes */}
             <Route path="page/page-list" element={<PageManagement />} />
             <Route path="page/menu-management" element={<MenuManagement />} />
+            <Route path="bus/admin-panel" element={<BusAdminPanel />} />
+            {/* Apartment Management */}
+<Route path="apartment-management" element={<ApartmentManagement />} />
+{/* Resort Management */}
+<Route path="resort-management" element={<Resortmanagement />} />
+<Route path="lounge-management" element={<Loungemanagement />} />
+<Route path="guesthouse-management" element={<Guesthousemanagement />} />
+<Route path="homestay-management" element={<Homestaymanagement />} />
+{/* Place Management */}
+<Route path="place-management" element={<Placemanagement />} />
+<Route path="guesthouse-management" element={<Guesthousemanagement />} />
+<Route path="houseboat-management" element={<Houseboatmanagement />} />
+<Route path="motel-management" element={<Motelmanagement />} />
+<Route path="hostel-management" element={<Hostelmanagement />} />
+<Route path="campsite-management" element={<Campsitepage />} />
+<Route path="campsite-booking" element={<Campsitebooking />} />
+<Route path="lovehotel-management" element={<Lovehotelpanel />} />
+<Route path="holidaypark-management" element={<Holidayparkpanel />} />
+<Route path="holidaypark-app" element={<Holidayparkapp />} />
+<Route path="farmstay-management" element={<Farmstayadmin />} />
+<Route path="vacationhouse-management" element={<Vacationhouseadmin />} />
+<Route path="motel-booking" element={<Motelbookingapp />} />
+
+
+{/* <Route path="darshan">
+  <Route path="darshan-list" element={<DarshanManagement />} />
+</Route> */}
+<Route path="darshan">
+  <Route path="darshan-list" element={<DarshanManagement />} />
+  <Route path="darshan-bookings" element={<AdminDarshanBookings />} />
+</Route>
+
+
+
+
+
+{/* Club Management Routes */}
+<Route path="club/members" element={<ClubMembers />} />
+<Route path="club/bookings" element={<ClubBookings />} />
+<Route path="club/payments" element={<ClubPayments />} />
+<Route path="club/events" element={<ClubEvents />} />
+
+
+
+
+
 
             {/* Query Management Routes */}
             <Route path="query/contact-us" element={<ContactUs />} />

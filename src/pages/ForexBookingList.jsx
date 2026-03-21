@@ -19,7 +19,7 @@ const ForexBookingList = () => {
 
   const fetchBookings = async () => {
     try {
-      const res = await axios.get("https://bmt-backend-1-vq3f.onrender.com/api/forex-bookings");
+      const res = await axios.get("http://localhost:9000/api/forex-bookings");
       setBookings(res.data);
     } catch (err) {
       console.error(err);
@@ -34,9 +34,9 @@ const ForexBookingList = () => {
     e.preventDefault();
     try {
       if (editingId) {
-        await axios.put(`https://bmt-backend-1-vq3f.onrender.com/api/forex-bookings/${editingId}`, formData);
+        await axios.put(`http://localhost:9000/api/forex-bookings/${editingId}`, formData);
       } else {
-        await axios.post("https://bmt-backend-1-vq3f.onrender.com/api/forex-bookings", formData);
+        await axios.post("http://localhost:9000/api/forex-bookings", formData);
       }
       setFormData({
         customerName: "",
@@ -59,7 +59,7 @@ const ForexBookingList = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://bmt-backend-1-vq3f.onrender.com/api/forex-bookings/${id}`);
+      await axios.delete(`http://localhost:9000/api/forex-bookings/${id}`);
       fetchBookings();
     } catch (err) {
       console.error(err);

@@ -129,7 +129,7 @@ export default function AdminSettingsLayout() {
         <div className="sidebar-header">
           <h2 className="sidebar-logo">{!isCollapsed && 'Admin Panel'}</h2>
           {isMobile ? (
-            <X className="hamburger" onClick={closeMobileMenu} />
+            <div className="hamburger" onClick={closeMobileMenu} />
           ) : (
             <Menu className="hamburger" onClick={toggleCollapse} />
           )}
@@ -139,7 +139,7 @@ export default function AdminSettingsLayout() {
           {renderSidebarItem("/admin/dashboard", "Dashboard", LayoutDashboard)}
 
           {/* Settings */}
-          <div className="sidebar-item dropdown-toggle" onClick={() => handleDropdownToggle('settings')}>
+          {/* <div className="sidebar-item dropdown-toggle" onClick={() => handleDropdownToggle('settings')}>
             <Settings className="icon" /> 
             {!isCollapsed && 'Settings'} 
             {!isCollapsed && (dropdownOpen === 'settings' ? <ChevronUp /> : <ChevronDown />)}
@@ -154,7 +154,7 @@ export default function AdminSettingsLayout() {
               {renderDropdownItem("/admin/flight-fare-type", "Flight Fare Type", CreditCard)}
               {renderDropdownItem("/admin/convience-fee", "Convenience Fee", Ticket)}
             </div>
-          )}
+          )} */}
 
           {/* Account Management */}
           <div className="sidebar-item dropdown-toggle" onClick={() => handleDropdownToggle('account')}>
@@ -166,8 +166,129 @@ export default function AdminSettingsLayout() {
             <div className="dropdown-menu">
               {renderDropdownItem("/admin/AgentPaymentHistory", "Agent Payment History", ShieldCheck)}
               {renderDropdownItem("/admin/online-transaction", "Online Transaction", CreditCard)}
+              {renderDropdownItem("/admin/payments", "Admin Payments", CreditCard)}
+
             </div>
           )}
+          {/* Campsite Management */}
+<div
+  className="sidebar-item dropdown-toggle"
+  onClick={() => handleDropdownToggle("campsite")}
+>
+  <Star className="icon" />
+  {!isCollapsed && "Campsite Management"}
+  {!isCollapsed &&
+    (dropdownOpen === "campsite" ? <ChevronUp /> : <ChevronDown />)}
+</div>
+{dropdownOpen === "campsite" && !isCollapsed && (
+  <div className="dropdown-menu">
+    {renderDropdownItem("/admin/campsite-management", "Campsite List", List)}
+    {renderDropdownItem("/admin/campsite-booking", "Campsite Booking", Calendar)}
+  </div>
+)}
+
+{/* {dropdownOpen === "campsite" && !isCollapsed && (
+  <div className="dropdown-menu">
+    {renderDropdownItem("/admin/campsite-management", "Campsite List", List)}
+  </div>
+)} */}
+{/* Holiday Park Management */}
+<div
+  className="sidebar-item dropdown-toggle"
+  onClick={() => handleDropdownToggle("holidaypark")}
+>
+  <Star className="icon" />
+  {!isCollapsed && "Holiday Park Management"}
+  {!isCollapsed &&
+    (dropdownOpen === "holidaypark" ? <ChevronUp /> : <ChevronDown />)}
+</div>
+
+{dropdownOpen === "holidaypark" && !isCollapsed && (
+  <div className="dropdown-menu">
+    {renderDropdownItem("/admin/holidaypark-management", "Holiday Park List", List)}
+      {renderDropdownItem("/admin/holidaypark-app", "Holiday Park App", PlusCircle)}
+  </div>
+)}
+{/* Vacation House Management */}
+<div
+  className="sidebar-item dropdown-toggle"
+  onClick={() => handleDropdownToggle("vacationhouse")}
+>
+  <Building className="icon" />
+  {!isCollapsed && "Vacation House Management"}
+  {!isCollapsed &&
+    (dropdownOpen === "vacationhouse" ? <ChevronUp /> : <ChevronDown />)}
+</div>
+
+{dropdownOpen === "vacationhouse" && !isCollapsed && (
+  <div className="dropdown-menu">
+    {renderDropdownItem("/admin/vacationhouse-management", "Vacation House List", List)}
+  </div>
+)}
+{/* Farmstay Management */}
+<div
+  className="sidebar-item dropdown-toggle"
+  onClick={() => handleDropdownToggle("farmstay")}
+>
+  <Star className="icon" />
+  {!isCollapsed && "Farmstay Management"}
+  {!isCollapsed &&
+    (dropdownOpen === "farmstay" ? <ChevronUp /> : <ChevronDown />)}
+</div>
+
+{dropdownOpen === "farmstay" && !isCollapsed && (
+  <div className="dropdown-menu">
+    {renderDropdownItem("/admin/farmstay-management", "Farmstay List", List)}
+  </div>
+)}
+{/* Love Hotel Management */}
+<div
+  className="sidebar-item dropdown-toggle"
+  onClick={() => handleDropdownToggle("lovehotel")}
+>
+  <Star className="icon" />
+  {!isCollapsed && "Love Hotel Management"}
+  {!isCollapsed &&
+    (dropdownOpen === "lovehotel" ? <ChevronUp /> : <ChevronDown />)}
+</div>
+
+{dropdownOpen === "lovehotel" && !isCollapsed && (
+  <div className="dropdown-menu">
+    {renderDropdownItem("/admin/lovehotel-management", "Love Hotel List", List)}
+  </div>
+)}
+          {/* Motel Management */}
+<div
+  className="sidebar-item dropdown-toggle"
+  onClick={() => handleDropdownToggle("motel")}
+>
+  <Building className="icon" />
+  {!isCollapsed && "Motel Management"}
+  {!isCollapsed &&
+    (dropdownOpen === "motel" ? <ChevronUp /> : <ChevronDown />)}
+</div>
+
+{dropdownOpen === "motel" && !isCollapsed && (
+  <div className="dropdown-menu">
+    {renderDropdownItem("/admin/motel-management", "Motel List", List)}
+  </div>
+)}
+{/* Hostel Management */}
+<div
+  className="sidebar-item dropdown-toggle"
+  onClick={() => handleDropdownToggle("hostel")}
+>
+  <Building className="icon" />
+  {!isCollapsed && "Hostel Management"}
+  {!isCollapsed &&
+    (dropdownOpen === "hostel" ? <ChevronUp /> : <ChevronDown />)}
+</div>
+
+{dropdownOpen === "hostel" && !isCollapsed && (
+  <div className="dropdown-menu">
+    {renderDropdownItem("/admin/hostel-management", "Hostel List", List)}
+  </div>
+)}
 
           {/* Flight Management */}
           <div className="sidebar-item dropdown-toggle" onClick={() => handleDropdownToggle('flight')}>
@@ -195,6 +316,23 @@ export default function AdminSettingsLayout() {
               {renderDropdownItem("/admin/flights/flight-query-list", "Flight Query List", FileText)}
             </div>
           )}
+          {/* Place Management */}
+<div
+  className="sidebar-item dropdown-toggle"
+  onClick={() => handleDropdownToggle("place")}
+>
+  <MapPin className="icon" />
+  {!isCollapsed && "Place Management"}
+  {!isCollapsed &&
+    (dropdownOpen === "place" ? <ChevronUp /> : <ChevronDown />)}
+</div>
+
+{dropdownOpen === "place" && !isCollapsed && (
+  <div className="dropdown-menu">
+    {renderDropdownItem("/admin/place-management", "Place List", List)}
+  </div>
+)}
+
 
           {/* Flight Extranet Management */}
           <div className="sidebar-item dropdown-toggle" onClick={() => handleDropdownToggle('flight-extranet')}>
@@ -210,6 +348,7 @@ export default function AdminSettingsLayout() {
               {renderDropdownItem("/admin/Extranet/add-fare-rule", "Add Fare Rule", FileText)}
             </div>
           )}
+          
 
           {/* Hotel Management */}
           <div className="sidebar-item dropdown-toggle" onClick={() => handleDropdownToggle('hotel')}>
@@ -227,6 +366,104 @@ export default function AdminSettingsLayout() {
               {renderDropdownItem("/admin/hotels/coupon-list", "Hotel Coupon List", Ticket)}
             </div>
           )}
+          
+          {/* Homestay Management */}
+<div
+  className="sidebar-item dropdown-toggle"
+  onClick={() => handleDropdownToggle("homestay")}
+>
+  <Building className="icon" />
+  {!isCollapsed && "Homestay Management"}
+  {!isCollapsed &&
+    (dropdownOpen === "homestay" ? <ChevronUp /> : <ChevronDown />)}
+</div>
+
+{dropdownOpen === "homestay" && !isCollapsed && (
+  <div className="dropdown-menu">
+    {renderDropdownItem("/admin/homestay-management", "Homestay List", List)}
+  </div>
+)}
+{/* Houseboat Management */}
+<div
+  className="sidebar-item dropdown-toggle"
+  onClick={() => handleDropdownToggle("houseboat")}
+>
+  <Building className="icon" />
+  {!isCollapsed && "Houseboat Management"}
+  {!isCollapsed &&
+    (dropdownOpen === "houseboat" ? <ChevronUp /> : <ChevronDown />)}
+</div>
+
+{dropdownOpen === "houseboat" && !isCollapsed && (
+  <div className="dropdown-menu">
+    {renderDropdownItem("/admin/houseboat-management", "Houseboat List", List)}
+  </div>
+)}
+          {/* Apartment Management */}
+<div
+  className="sidebar-item dropdown-toggle"
+  onClick={() => handleDropdownToggle("apartment")}
+>
+  <Building className="icon" />
+  {!isCollapsed && "Apartment Management"}
+  {!isCollapsed &&
+    (dropdownOpen === "apartment" ? <ChevronUp /> : <ChevronDown />)}
+</div>
+
+{dropdownOpen === "apartment" && !isCollapsed && (
+  <div className="dropdown-menu">
+    {renderDropdownItem("/admin/apartment-management", "Apartment List", List)}
+  </div>
+)}
+{/* Guesthouse Management */}
+<div
+  className="sidebar-item dropdown-toggle"
+  onClick={() => handleDropdownToggle("guesthouse")}
+>
+  <Building className="icon" />
+  {!isCollapsed && "Guest House Management"}
+  {!isCollapsed &&
+    (dropdownOpen === "guesthouse" ? <ChevronUp /> : <ChevronDown />)}
+</div>
+
+{dropdownOpen === "guesthouse" && !isCollapsed && (
+  <div className="dropdown-menu">
+    {renderDropdownItem("/admin/guesthouse-management", "Guest House List", List)}
+  </div>
+)}
+{/* Lounge Management */}
+<div
+  className="sidebar-item dropdown-toggle"
+  onClick={() => handleDropdownToggle("lounge")}
+>
+  <Building className="icon" />
+  {!isCollapsed && "Lounge Management"}
+  {!isCollapsed &&
+    (dropdownOpen === "lounge" ? <ChevronUp /> : <ChevronDown />)}
+</div>
+
+{dropdownOpen === "lounge" && !isCollapsed && (
+  <div className="dropdown-menu">
+    {renderDropdownItem("/admin/lounge-management", "Lounge List", List)}
+  </div>
+)}
+
+{/* Resort Management */}
+<div
+  className="sidebar-item dropdown-toggle"
+  onClick={() => handleDropdownToggle("resort")}
+>
+  <Building className="icon" />
+  {!isCollapsed && "Resort Management"}
+  {!isCollapsed &&
+    (dropdownOpen === "resort" ? <ChevronUp /> : <ChevronDown />)}
+</div>
+
+{dropdownOpen === "resort" && !isCollapsed && (
+  <div className="dropdown-menu">
+    {renderDropdownItem("/admin/resort-management", "Resort List", List)}
+  </div>
+)}
 
           {/* Hotel Extranet Management */}
           <div className="sidebar-item dropdown-toggle" onClick={() => handleDropdownToggle('hotel-extranet')}>
@@ -289,6 +526,8 @@ export default function AdminSettingsLayout() {
           </div>
           {dropdownOpen === 'bus' && !isCollapsed && (
             <div className="dropdown-menu">
+              {renderDropdownItem("/admin/bus/admin-panel", "Bus Admin Panel", List)}
+
               {renderDropdownItem("/admin/bus/route-list", "Bus Route List", MapPin)}
               {renderDropdownItem("/admin/bus/booking-list", "Bus Booking List", ClipboardList)}
               {renderDropdownItem("/admin/bus/amendment-list", "Amendment List", FileText)}
@@ -311,7 +550,7 @@ export default function AdminSettingsLayout() {
               {renderDropdownItem("/admin/train/route-list", "Train Route List", MapPin)}
               {renderDropdownItem("/admin/train/booking-list", "Train Booking List", ClipboardList)}
               {renderDropdownItem("/admin/train/amendment-list", "Amendment List", FileText)}
-              {renderDropdownItem("/admin/train/query-list", "Train Query List", Search)}
+              {renderDropdownItem("/admin/train/query-list", "Train Query List", Search)} 
               {renderDropdownItem("/admin/train/markup", "Train Markup", BarChart3)}
               {renderDropdownItem("/admin/train/discount", "Train Discount", Gift)}
               {renderDropdownItem("/admin/train/coupon-list", "Train Coupon List", Ticket)}
@@ -412,6 +651,45 @@ export default function AdminSettingsLayout() {
     {renderDropdownItem("/admin/tour/settings", "Tour Settings", Settings)}
   </div>
 )} */}
+
+
+
+{/* <div 
+  className="sidebar-item dropdown-toggle" 
+  onClick={() => setDropdownOpen('darshan')}
+>
+  <FileText className="icon" /> 
+  {!isCollapsed && 'Darshan Management'} 
+  {!isCollapsed && (dropdownOpen === 'darshan' ? <ChevronUp /> : <ChevronDown />)}
+</div>
+{dropdownOpen === 'darshan' && !isCollapsed && (
+  <div className="dropdown-menu">
+    {renderDropdownItem("/admin/darshan/darshan-list", "Darshan List", ClipboardList)}
+  </div> */}
+{/* )} */}
+
+<div 
+  className="sidebar-item dropdown-toggle" 
+  onClick={() => handleDropdownToggle('darshan')}
+>
+  <FileText className="icon" /> 
+  {!isCollapsed && 'Darshan Management'} 
+  {!isCollapsed && (dropdownOpen === 'darshan' ? <ChevronUp /> : <ChevronDown />)}
+</div>
+
+{dropdownOpen === 'darshan' && !isCollapsed && (
+  <div className="dropdown-menu">
+    {renderDropdownItem("/admin/darshan/darshan-list", "Darshan List", ClipboardList)}
+    {renderDropdownItem("/admin/darshan/darshan-bookings", "Darshan Bookings", Calendar)}
+  </div>
+)}
+
+
+
+
+
+
+
 {/* Activity Management */}
 <div
   className="sidebar-item dropdown-toggle"
@@ -449,6 +727,40 @@ export default function AdminSettingsLayout() {
 
 
 
+{/* Club Management */}
+<div
+  className="sidebar-item dropdown-toggle"
+  onClick={() => handleDropdownToggle("club")}
+>
+  <MessageCircle className="icon" />
+  {!isCollapsed && "Club Management"}
+  {!isCollapsed &&
+    (dropdownOpen === "club" ? <ChevronUp /> : <ChevronDown />)}
+</div>
+
+{dropdownOpen === "club" && !isCollapsed && (
+  <div className="dropdown-menu">
+    {/* Members */}
+    {renderDropdownItem("/admin/club/members", "Members", PlusCircle)}
+   
+
+    {/* Events */}
+    {renderDropdownItem("/admin/club/events", "Events", Calendar)}
+    
+
+    {/* Bookings */}
+    {renderDropdownItem("/admin/club/bookings", "Bookings", Calendar)}
+    
+
+    {/* Payments */}
+    {renderDropdownItem("/admin/club/payments", "Payments", CreditCard)}
+
+  </div>
+)}
+
+
+
+
 
 
           {/* Query Management */}
@@ -463,9 +775,19 @@ export default function AdminSettingsLayout() {
             </div>
           )}
 
-          <div className="sidebar-item logout-item" onClick={() => console.log('Logout')}>
+          {/* <div className="sidebar-item logout-item" onClick={() => console.log('Logout')}>
             <LogOut className="icon" /> {!isCollapsed && 'Logout'}
-          </div>
+          </div> */}
+          <div
+  className="sidebar-item logout-item"
+  onClick={() => {
+    localStorage.removeItem("adminToken"); // ✅ token delete
+    window.location.href = "/"; // ✅ login page redirect
+  }}
+>
+  <LogOut className="icon" /> {!isCollapsed && 'Logout'}
+</div>
+
         </nav>
       </aside>
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const BASE_URL = "https://bmt-backend-1-vq3f.onrender.com/api"; // apna backend ka URL
+const BASE_URL = "http://localhost:9000/api/exchange-rates"; // FIXED URL
 
 export default function ExchangeRates() {
   const [rates, setRates] = useState([]);
@@ -8,6 +8,7 @@ export default function ExchangeRates() {
   const [error, setError] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
+
   const [form, setForm] = useState({
     id: "",
     fromCurrency: "",
@@ -16,9 +17,10 @@ export default function ExchangeRates() {
     effectiveDate: "",
     active: true,
   });
+
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(1);
-  const [pageSize] = useState(10);
+  const pageSize = 10;
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
@@ -30,10 +32,13 @@ export default function ExchangeRates() {
     try {
       setLoading(true);
       setError("");
+
       const res = await fetch(
-        `${BASE_URL}/api/exchange-rates?page=${page}&limit=${pageSize}&q=${query}`
+        `${BASE_URL}?page=${page}&limit=${pageSize}&q=${query}`
       );
+
       if (!res.ok) throw new Error("Failed to fetch");
+
       const data = await res.json();
       setRates(data.items || []);
       setTotal(data.total || 0);
@@ -44,13 +49,13 @@ export default function ExchangeRates() {
     }
   };
 
-  // Handle input change
+  // Input handler
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setForm((f) => ({ ...f, [name]: type === "checkbox" ? checked : value }));
   };
 
-  // Open add form
+  // Add new rate modal
   const openAdd = () => {
     setIsEditing(false);
     setForm({
@@ -64,7 +69,7 @@ export default function ExchangeRates() {
     setShowModal(true);
   };
 
-  // Open edit form
+  // Edit modal
   const openEdit = (item) => {
     setIsEditing(true);
     setForm({
@@ -78,7 +83,7 @@ export default function ExchangeRates() {
     setShowModal(true);
   };
 
-  // Submit form
+  // Submit Add/Edit
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -90,11 +95,11 @@ export default function ExchangeRates() {
         active: form.active,
       };
 
-      let url = `${BASE_URL}/api/exchange-rates`;
+      let url = BASE_URL;
       let method = "POST";
 
       if (isEditing) {
-        url = `${BASE_URL}/api/exchange-rates/${form.id}`;
+        url = `${BASE_URL}/${form.id}`;
         method = "PUT";
       }
 
@@ -113,13 +118,11 @@ export default function ExchangeRates() {
     }
   };
 
-  // Delete rate
+  // Delete
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure to delete?")) return;
     try {
-      const res = await fetch(`${BASE_URL}/api/exchange-rates/${id}`, {
-        method: "DELETE",
-      });
+      const res = await fetch(`${BASE_URL}/${id}`, { method: "DELETE" });
       if (!res.ok) throw new Error("Delete failed");
       fetchRates();
     } catch (err) {
@@ -129,8 +132,10 @@ export default function ExchangeRates() {
 
   return (
     <div className="p-6">
+      {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-2xl font-semibold">Exchange Rates</h2>
+
         <div className="flex gap-3">
           <input
             value={query}
@@ -139,10 +144,7 @@ export default function ExchangeRates() {
             className="border rounded px-3 py-2 text-sm"
           />
           <button
-            onClick={() => {
-              setPage(1);
-              fetchRates();
-            }}
+            onClick={() => setPage(1)}
             className="px-4 py-2 bg-gray-100 rounded"
           >
             Search
@@ -156,6 +158,7 @@ export default function ExchangeRates() {
         </div>
       </div>
 
+      {/* Table */}
       <div className="bg-white shadow rounded">
         <table className="min-w-full table-auto">
           <thead className="bg-gray-50">
@@ -176,6 +179,7 @@ export default function ExchangeRates() {
                 </td>
               </tr>
             )}
+
             {!loading && rates.length === 0 && (
               <tr>
                 <td colSpan={6} className="text-center p-4">
@@ -183,6 +187,7 @@ export default function ExchangeRates() {
                 </td>
               </tr>
             )}
+
             {!loading &&
               rates.map((r) => (
                 <tr key={r._id} className="border-t">
@@ -217,6 +222,7 @@ export default function ExchangeRates() {
           <span>
             Page {page} of {Math.ceil(total / pageSize)}
           </span>
+
           <div className="flex gap-2">
             <button
               disabled={page <= 1}
@@ -225,6 +231,7 @@ export default function ExchangeRates() {
             >
               Prev
             </button>
+
             <button
               disabled={page >= Math.ceil(total / pageSize)}
               onClick={() => setPage((p) => p + 1)}
@@ -243,6 +250,7 @@ export default function ExchangeRates() {
             <h3 className="text-lg font-medium mb-4">
               {isEditing ? "Edit Rate" : "Add Rate"}
             </h3>
+
             <form onSubmit={handleSubmit} className="space-y-3">
               <div className="grid grid-cols-2 gap-3">
                 <div>
@@ -255,6 +263,7 @@ export default function ExchangeRates() {
                     required
                   />
                 </div>
+
                 <div>
                   <label className="block text-sm">To</label>
                   <input
@@ -279,6 +288,7 @@ export default function ExchangeRates() {
                     required
                   />
                 </div>
+
                 <div>
                   <label className="block text-sm">Effective Date</label>
                   <input
@@ -309,6 +319,7 @@ export default function ExchangeRates() {
                 >
                   Cancel
                 </button>
+
                 <button
                   type="submit"
                   className="px-4 py-2 bg-indigo-600 text-white rounded"

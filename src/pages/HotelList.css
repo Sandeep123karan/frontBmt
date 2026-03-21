@@ -1,38 +1,111 @@
+/* ========================
+   CONTAINER
+======================== */
 .hotel-list-container {
-  padding: 20px;
-  font-family: 'Segoe UI', sans-serif;
-  max-width: 1000px;
+  width: 100%;
+  max-width: 1100px;
   margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
 }
 
-.city-input {
-  padding: 8px;
+.hotel-list-container h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* ========================
+   STATUS TEXT
+======================== */
+.loading, .error, .no-data {
+  text-align: center;
+  margin-top: 10px;
   font-size: 16px;
-  margin-bottom: 15px;
-  width: 300px;
-  display: block;
 }
 
+.error { color: #b70000; font-weight: bold; }
+.loading { color: #0066ff; }
+
+/* ========================
+   TABLE (DESKTOP)
+======================== */
 .hotel-table {
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 10px;
   overflow: hidden;
+  border: 1px solid #e4e4e4;
 }
 
 .hotel-row {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 10px;
-  border-top: 1px solid #ddd;
+  grid-template-columns: 25% 25% 25% 10% 15%;
+  padding: 12px 15px;
+  border-bottom: 1px solid #f1f1f1;
+  background: #fff;
 }
 
 .hotel-row.header {
-  background: #f0f0f0;
+  background: #f5f7fa;
   font-weight: bold;
-  border-top: none;
+  color: #222;
 }
 
-.error {
-  color: red;
-  margin-top: 10px;
+.hotel-row:hover {
+  background: #fafafa;
+}
+
+/* ========================
+   MOBILE RESPONSIVE
+======================== */
+@media (max-width: 768px) {
+
+  .hotel-row.header {
+    display: none; /* hide table header on mobile */
+  }
+
+  .hotel-row {
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 12px;
+  }
+
+  .hotel-row span {
+    display: block;
+    padding: 8px 0;
+    font-size: 15px;
+    border-bottom: 1px solid #f4f4f4;
+  }
+
+  .hotel-row span:last-child {
+    border-bottom: none;
+  }
+
+  .hotel-row span::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 3px;
+  }
+}
+
+/* ========================
+   SMALL MOBILE
+======================== */
+@media (max-width: 450px) {
+  .hotel-list-container {
+    padding: 10px;
+  }
+
+  .hotel-list-container h2 {
+    font-size: 22px;
+  }
+
+  .hotel-row span {
+    font-size: 14px;
+  }
 }

@@ -13,7 +13,7 @@ const FlightAirline = () => {
   useEffect(() => {
     const fetchAirlines = async () => {
       try {
-        const res = await axios.get('https://bmt-backend-1-vq3f.onrender.com/api/world-airlines');
+        const res = await axios.get('http://localhost:9000/api/world-airlines');
         setAirlines(res.data);
         setLoading(false);
       } catch (err) {

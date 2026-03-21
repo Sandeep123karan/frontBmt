@@ -13,7 +13,7 @@ function AgentPaymentHistory() {
     if (searchKey && searchValue) query.push(`key=${searchKey}&value=${searchValue}`);
     if (fromDate && toDate) query.push(`fromDate=${fromDate}&toDate=${toDate}`);
 
-    const res = await fetch(`https://bmt-backend-1-vq3f.onrender.com/api/agent-payments?${query.join('&')}`);
+    const res = await fetch(`http://localhost:9000/api/agent-payments?${query.join('&')}`);
     const data = await res.json();
     setPayments(data);
   };

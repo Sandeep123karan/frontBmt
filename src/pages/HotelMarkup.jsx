@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import "./HotelMarkup.css";
 import axios from "axios";
+import "./HotelMarkup.css";
 
 function HotelMarkup() {
   const [data, setData] = useState([]);
+  const [editId, setEditId] = useState(null);
+
   const [form, setForm] = useState({
     markupFor: "B2B",
     agentClass: "",
@@ -24,64 +26,125 @@ function HotelMarkup() {
     fetchData();
   }, []);
 
+  // Add / Update
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("/api/hotel-markup", {
+
+    const payload = {
       ...form,
-      agentClass: form.agentClass.split(","),
-      regionType: form.regionType.split(","),
+      agentClass: form.agentClass.split(",").map((s) => s.trim()),
+      regionType: form.regionType.split(",").map((s) => s.trim()),
       starRating: form.starRating.split(",").map(Number),
+    };
+
+    if (editId) {
+      await axios.put(`/api/hotel-markup/${editId}`, payload);
+    } else {
+      await axios.post("/api/hotel-markup", payload);
+    }
+
+    setEditId(null);
+    setForm({
+      markupFor: "B2B",
+      agentClass: "",
+      value: "",
+      regionType: "",
+      hotelMarkupType: "Per Night",
+      displayMarkup: "In Tax",
+      starRating: "",
+      status: "Active",
     });
-    setForm({ ...form, value: "", agentClass: "", regionType: "", starRating: "" });
+
     fetchData();
   };
 
+  // Edit
+  const handleEdit = (item) => {
+    setEditId(item._id);
+
+    setForm({
+      ...item,
+      agentClass: item.agentClass.join(", "),
+      regionType: item.regionType.join(", "),
+      starRating: item.starRating.join(", "),
+    });
+  };
+
+  // Delete
   const handleDelete = async (id) => {
     await axios.delete(`/api/hotel-markup/${id}`);
     fetchData();
   };
 
+  // Toggle Status
+  const toggleStatus = async (id) => {
+    await axios.put(`/api/hotel-markup/toggle-status/${id}`);
+    fetchData();
+  };
+
   return (
     <div className="hotel-markup-wrapper">
-      <h2>Hotel Markup</h2>
+      <h2>🏨 Hotel Markup Management</h2>
+
+      {/* FORM */}
       <form onSubmit={handleSubmit} className="hotel-form">
-        <input type="text" placeholder="Agent Class (comma separated)" value={form.agentClass} onChange={(e) => setForm({ ...form, agentClass: e.target.value })} />
-        <input type="number" placeholder="Value" value={form.value} onChange={(e) => setForm({ ...form, value: e.target.value })} />
-        <input type="text" placeholder="Region Type" value={form.regionType} onChange={(e) => setForm({ ...form, regionType: e.target.value })} />
-        <input type="text" placeholder="Star Rating (comma separated)" value={form.starRating} onChange={(e) => setForm({ ...form, starRating: e.target.value })} />
-        <button type="submit">Add Hotel Markup</button>
+        <input type="text" placeholder="Agent Class" value={form.agentClass}
+          onChange={(e) => setForm({ ...form, agentClass: e.target.value })} />
+
+        <input type="number" placeholder="Value" value={form.value}
+          onChange={(e) => setForm({ ...form, value: e.target.value })} required />
+
+        <input type="text" placeholder="Region Type" value={form.regionType}
+          onChange={(e) => setForm({ ...form, regionType: e.target.value })} />
+
+        <input type="text" placeholder="Star Rating" value={form.starRating}
+          onChange={(e) => setForm({ ...form, starRating: e.target.value })} />
+
+        <button type="submit">{editId ? "Update" : "Add"} Markup</button>
       </form>
 
+      {/* TABLE */}
       <table className="markup-table">
         <thead>
           <tr>
-            <th>Markup For</th>
+            <th>For</th>
             <th>Agent Class</th>
             <th>Value</th>
-            <th>Region Type</th>
-            <th>Markup Type</th>
+            <th>Region</th>
+            <th>Type</th>
             <th>Display</th>
-            <th>Star</th>
+            <th>Stars</th>
             <th>Status</th>
             <th>Created</th>
             <th>Action</th>
           </tr>
         </thead>
+
         <tbody>
-          {data.map((markup) => (
-            <tr key={markup._id}>
-              <td>{markup.markupFor}</td>
-              <td>{markup.agentClass.join(", ")}</td>
-              <td>{markup.value}</td>
-              <td>{markup.regionType.join(", ")}</td>
-              <td>{markup.hotelMarkupType}</td>
-              <td>{markup.displayMarkup}</td>
-              <td>{markup.starRating.join(", ")}</td>
-              <td>{markup.status}</td>
-              <td>{new Date(markup.createdAt).toLocaleString()}</td>
+          {data.map((row) => (
+            <tr key={row._id}>
+              <td>{row.markupFor}</td>
+              <td>{row.agentClass.join(", ")}</td>
+              <td>{row.value}</td>
+              <td>{row.regionType.join(", ")}</td>
+              <td>{row.hotelMarkupType}</td>
+              <td>{row.displayMarkup}</td>
+              <td>{row.starRating.join(", ")}</td>
+
               <td>
-                <button onClick={() => handleDelete(markup._id)}>❌</button>
-                {/* Add edit functionality if needed */}
+                <button
+                  className={row.status === "Active" ? "active" : "inactive"}
+                  onClick={() => toggleStatus(row._id)}
+                >
+                  {row.status}
+                </button>
+              </td>
+
+              <td>{new Date(row.createdAt).toLocaleString()}</td>
+
+              <td>
+                <button onClick={() => handleEdit(row)}>✏️</button>
+                <button onClick={() => handleDelete(row._id)}>🗑️</button>
               </td>
             </tr>
           ))}

@@ -1,0 +1,79 @@
+.cruise-container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.cruise-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Table Styling */
+.cruise-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  
+  border: 1px solid #ddd;
+}
+
+.cruise-table th {
+  background: #f2f2f2;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  font-weight: 600;
+  color: black;
+}
+
+.cruise-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.cruise-table tr:hover {
+  background: #fafafa;
+  transition: 0.2s ease-in-out;
+}
+
+/* Image Styling */
+.cruise-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Buttons */
+.cruise-btn-edit {
+  background: #f5b100;
+  color: white;
+  padding: 5px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 6px;
+}
+
+.cruise-btn-edit:hover {
+  background: #d99a00;
+}
+
+.cruise-btn-delete {
+  background: #e63946;
+  color: white;
+  padding: 5px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cruise-btn-delete:hover {
+  background: #b81f2d;
+}

@@ -18,7 +18,7 @@ function OfflineFlight() {
   const [editingId, setEditingId] = useState(null);
 
   const loadFlights = async () => {
-    const res = await axios.get("https://bmt-backend-1-vq3f.onrender.com/api/offline-flights");
+    const res = await axios.get("http://localhost:9000/api/offline-flights");
     setOfflineFlights(res.data);
   };
 
@@ -37,9 +37,9 @@ function OfflineFlight() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (editingId) {
-      await axios.put(`https://bmt-backend-1-vq3f.onrender.com/api/offline-flights/${editingId}`, form);
+      await axios.put(`http://localhost:9000/api/offline-flights/${editingId}`, form);
     } else {
-      await axios.post("https://bmt-backend-1-vq3f.onrender.com/api/offline-flights", form);
+      await axios.post("http://localhost:9000/api/offline-flights", form);
     }
     setForm({
       supplier: "",
@@ -61,7 +61,7 @@ function OfflineFlight() {
   };
 
   const handleDelete = async (id) => {
-    await axios.delete(`https://bmt-backend-1-vq3f.onrender.com/api/offline-flights/${id}`);
+    await axios.delete(`http://localhost:9000/api/offline-flights/${id}`);
     loadFlights();
   };
 
@@ -70,7 +70,7 @@ function OfflineFlight() {
       ...flight,
       status: flight.status === "Active" ? "Inactive" : "Active",
     };
-    await axios.put(`https://bmt-backend-1-vq3f.onrender.com/api/offline-flights/${flight._id}`, updated);
+    await axios.put(`http://localhost:9000/api/offline-flights/${flight._id}`, updated);
     loadFlights();
   };
 

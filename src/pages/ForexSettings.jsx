@@ -7,7 +7,7 @@ function ForexSetting() {
 
   // Fetch all settings
   const fetchSettings = async () => {
-    const res = await axios.get("https://bmt-backend-1-vq3f.onrender.com/api/forex-settings");
+    const res = await axios.get("http://localhost:9000/api/forex-settings");
     setSettings(res.data);
   };
 
@@ -18,14 +18,14 @@ function ForexSetting() {
 
   // Add setting
   const handleAdd = async () => {
-    await axios.post("https://bmt-backend-1-vq3f.onrender.com/api/forex-settings", form);
+    await axios.post("http://localhost:9000/api/forex-settings", form);
     fetchSettings();
     setForm({ currency: "", buyRate: "", sellRate: "", status: "Active" });
   };
 
   // Delete setting
   const handleDelete = async (id) => {
-    await axios.delete(`https://bmt-backend-1-vq3f.onrender.com/api/forex-settings/${id}`);
+    await axios.delete(`http://localhost:9000/api/forex-settings/${id}`);
     fetchSettings();
   };
 
