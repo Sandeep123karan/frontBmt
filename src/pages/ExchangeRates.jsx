@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const BASE_URL = "http://localhost:9000/api/exchange-rates"; // FIXED URL
+const BASE_URL = "https://bmtadmin.onrender.com/api/exchange-rates"; // FIXED URL
 
 export default function ExchangeRates() {
   const [rates, setRates] = useState([]);

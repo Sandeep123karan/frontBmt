@@ -333,7 +333,7 @@
 
 // function HotelBookingList() {
 
-// const API = "http://localhost:9000/api/hotel-bookings";
+// const API = "https://bmtadmin.onrender.com/api/hotel-bookings";
 
 // const emptyForm = {
 //   refNo: "",
@@ -670,7 +670,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const API = "http://localhost:9000/api/hotel-bookings";
+const API = "https://bmtadmin.onrender.com/api/hotel-bookings";
 
 function HotelBooking() {
 

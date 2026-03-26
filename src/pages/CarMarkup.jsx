@@ -2,7 +2,7 @@
 // import axios from "axios";
 // import "./CarMarkup.css"
 
-// const API = "http://localhost:9000/api/admin/car-markup";
+// const API = "https://bmtadmin.onrender.com/api/admin/car-markup";
 
 // function CarMarkup() {
 //   const [form, setForm] = useState({ name: "", value: "", status: true });
@@ -93,7 +93,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const API = "http://localhost:9000/api/admin/car-markup";
+const API = "https://bmtadmin.onrender.com/api/admin/car-markup";
 
 function CarMarkup() {
   const [form, setForm] = useState({ name: "", value: "", status: true });

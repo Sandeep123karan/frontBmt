@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const API = "http://localhost:9000/api/train-discounts";
+const API = "https://bmtadmin.onrender.com/api/train-discounts";
 
 export default function TrainDiscountList() {
   const [list, setList] = useState([]);

@@ -1,6 +1,6 @@
 // import { useState, useEffect } from "react";
 
-// const API = "http://localhost:9000/api/bus";
+// const API = "https://bmtadmin.onrender.com/api/bus";
 
 // const STYLES = `
 //   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
@@ -716,7 +716,7 @@
 //                   <tr key={bus._id}>
 //                     <td>
 //                       {bus.busImages?.[0]
-//                         ? <img className="thumb" src={`http://localhost:9000/${bus.busImages[0]}`} alt="" onError={e=>{e.target.style.display="none"}} />
+//                         ? <img className="thumb" src={`https://bmtadmin.onrender.com/${bus.busImages[0]}`} alt="" onError={e=>{e.target.style.display="none"}} />
 //                         : <div className="thumb-ph">🚌</div>
 //                       }
 //                     </td>
@@ -798,7 +798,7 @@
 
 import { useState, useEffect, useRef } from "react";
 
-const API = "http://localhost:9000/api/bus";
+const API = "https://bmtadmin.onrender.com/api/bus";
 
 const STYLES = `
   @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap');
@@ -1929,7 +1929,7 @@ export default function AdminBusPanel() {
                     <td>
                       <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                         {bus.frontImage
-                          ? <img className="thumb" src={`http://localhost:9000/${bus.frontImage}`} alt="" onError={e => e.target.style.display = "none"} />
+                          ? <img className="thumb" src={`https://bmtadmin.onrender.com/${bus.frontImage}`} alt="" onError={e => e.target.style.display = "none"} />
                           : <div className="thumb-ph">🚌</div>}
                         <div>
                           <div className="row-main">{bus.busName}</div>

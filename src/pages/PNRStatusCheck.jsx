@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const API = "http://localhost:9000/api/pnr-status";
+const API = "https://bmtadmin.onrender.com/api/pnr-status";
 
 export default function PNRStatusCheck() {
   const [pnr, setPnr] = useState("");

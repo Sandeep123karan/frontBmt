@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-const API = "http://localhost:9000/api/place";
+const API = "https://bmtadmin.onrender.com/api/place";
 const PER_PAGE = 8;
 
 const CATEGORIES = ["Tourist Place","City","Beach","Mountain","Temple","Historical","Adventure","Shopping","Nightlife","Other"];

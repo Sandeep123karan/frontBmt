@@ -13,7 +13,7 @@
 //   // Fetch discounts from backend
 //   const fetchDiscounts = async () => {
 //     try {
-//       const res = await fetch("http://localhost:9000/api/visa-discounts");
+//       const res = await fetch("https://bmtadmin.onrender.com/api/visa-discounts");
 //       const data = await res.json();
 //       setDiscounts(data);
 //     } catch (error) {
@@ -37,7 +37,7 @@
 //     if (!form.country || !form.discount || !form.validTill) return;
 
 //     try {
-//       const res = await fetch("http://localhost:9000/api/visa-discounts", {
+//       const res = await fetch("https://bmtadmin.onrender.com/api/visa-discounts", {
 //         method: "POST",
 //         headers: { "Content-Type": "application/json" },
 //         body: JSON.stringify(form),
@@ -59,7 +59,7 @@
 //     if (!ok) return;
 
 //     try {
-//       await fetch(`http://localhost:9000/api/visa-discounts/${id}`, {
+//       await fetch(`https://bmtadmin.onrender.com/api/visa-discounts/${id}`, {
 //         method: "DELETE",
 //       });
 
@@ -179,7 +179,7 @@ function VisaDiscount() {
   // Fetch discounts from backend
   const fetchDiscounts = async () => {
     try {
-      const res = await fetch("http://localhost:9000/api/visa-discounts");
+      const res = await fetch("https://bmtadmin.onrender.com/api/visa-discounts");
       const data = await res.json();
       setDiscounts(data);
     } catch (error) {
@@ -204,7 +204,7 @@ function VisaDiscount() {
     if (!form.country || !form.discount || !form.validTill) return;
 
     try {
-      const res = await fetch("http://localhost:9000/api/visa-discounts", {
+      const res = await fetch("https://bmtadmin.onrender.com/api/visa-discounts", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
@@ -225,7 +225,7 @@ function VisaDiscount() {
     if (!ok) return;
 
     try {
-      await fetch(`http://localhost:9000/api/visa-discounts/${id}`, {
+      await fetch(`https://bmtadmin.onrender.com/api/visa-discounts/${id}`, {
         method: "DELETE",
       });
 
@@ -250,7 +250,7 @@ function VisaDiscount() {
     setSaving(true);
     try {
       const res = await fetch(
-        `http://localhost:9000/api/visa-discounts/${editData._id}`,
+        `https://bmtadmin.onrender.com/api/visa-discounts/${editData._id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

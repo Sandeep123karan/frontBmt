@@ -197,7 +197,7 @@ const BusQueries = () => {
   const fetchQueries = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:9000/api/bus-queries");
+      const res = await axios.get("https://bmtadmin.onrender.com/api/bus-queries");
       setQueries(res.data);
     } catch (err) {
       setMessage("Error loading queries");
@@ -209,7 +209,7 @@ const BusQueries = () => {
   // Fetch Bus Routes (Safe Array Handling)
   const fetchRoutes = async () => {
     try {
-      const res = await axios.get("http://localhost:9000/api/bus-routes");
+      const res = await axios.get("https://bmtadmin.onrender.com/api/bus-routes");
 
       console.log("ROUTE API RESPONSE:", res.data);
 
@@ -238,12 +238,12 @@ const BusQueries = () => {
     try {
       if (editId) {
         await axios.put(
-          `http://localhost:9000/api/bus-queries/${editId}`,
+          `https://bmtadmin.onrender.com/api/bus-queries/${editId}`,
           form
         );
         setMessage("Query updated successfully");
       } else {
-        await axios.post("http://localhost:9000/api/bus-queries", form);
+        await axios.post("https://bmtadmin.onrender.com/api/bus-queries", form);
         setMessage("Query added successfully");
       }
 
@@ -271,7 +271,7 @@ const BusQueries = () => {
     if (!window.confirm("Are you sure you want to delete this query?")) return;
 
     try {
-      await axios.delete(`http://localhost:9000/api/bus-queries/${id}`);
+      await axios.delete(`https://bmtadmin.onrender.com/api/bus-queries/${id}`);
       setMessage("Query deleted successfully");
       fetchQueries();
     } catch (err) {

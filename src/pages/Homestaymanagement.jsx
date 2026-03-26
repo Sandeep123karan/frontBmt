@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const API = "http://localhost:9000/api/homestay";
+const API = "https://bmtadmin.onrender.com/api/homestay";
 const PER_PAGE = 8;
 
 const AMENITIES_LIST = [
@@ -694,7 +694,7 @@ function ViewModal({ data: s, onClose, sc }) {
       <div style={{ marginBottom:15 }}>
         <div style={{ fontSize:12, color:"#888", marginBottom:6 }}>Thumbnail</div>
         <img
-          src={`http://localhost:9000/${s.thumbnail}`}
+          src={`https://bmtadmin.onrender.com/${s.thumbnail}`}
           alt="thumb"
           style={{
             width:180,
@@ -715,7 +715,7 @@ function ViewModal({ data: s, onClose, sc }) {
           {s.gallery.map((img, i) => (
             <img
               key={i}
-              src={`http://localhost:9000/${img}`}
+              src={`https://bmtadmin.onrender.com/${img}`}
               alt="gallery"
               style={{
                 width:120,
@@ -725,7 +725,7 @@ function ViewModal({ data: s, onClose, sc }) {
                 border:"1px solid #222",
                 cursor:"pointer"
               }}
-              onClick={() => window.open(`http://localhost:9000/${img}`, "_blank")}
+              onClick={() => window.open(`https://bmtadmin.onrender.com/${img}`, "_blank")}
             />
           ))}
         </div>

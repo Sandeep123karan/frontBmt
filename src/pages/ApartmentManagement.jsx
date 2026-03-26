@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-const API = "http://localhost:9000/api/apartment";
+const API = "https://bmtadmin.onrender.com/api/apartment";
 
 const AMENITIES = [
   { value: "WiFi", label: "📶 WiFi" },
@@ -458,7 +458,7 @@ export default function ApartmentPage() {
                       <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                         <div style={styles.tdThumb}>
                           {apt.thumbnail
-                            ? <img src={`http://localhost:9000/uploads/${apt.thumbnail}`} alt=""
+                            ? <img src={`https://bmtadmin.onrender.com/uploads/${apt.thumbnail}`} alt=""
                                 style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                             : <span>🏢</span>}
                         </div>
@@ -534,7 +534,7 @@ export default function ApartmentPage() {
 
             {/* Img */}
             {viewApt.thumbnail && (
-              <img src={`http://localhost:9000/uploads/${viewApt.thumbnail}`} alt=""
+              <img src={`https://bmtadmin.onrender.com/uploads/${viewApt.thumbnail}`} alt=""
                 style={{ width: "100%", height: 180, objectFit: "cover" }} />
             )}
 

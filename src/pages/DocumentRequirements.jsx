@@ -6,7 +6,7 @@ function VisaDocumentList() {
   const [description, setDescription] = useState('');
   const [editingId, setEditingId] = useState(null);
 
-  const API_URL = 'http://localhost:9000/api/document-requirements';
+  const API_URL = 'https://bmtadmin.onrender.com/api/document-requirements';
 
   useEffect(() => {
     fetchDocs();

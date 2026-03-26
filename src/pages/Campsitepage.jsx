@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-const API = "http://localhost:9000/api/campsites";
+const API = "https://bmtadmin.onrender.com/api/campsites";
 
 const AMENITIES_LIST = ["WiFi", "Bonfire", "Toilet", "Shower", "Parking", "Kitchen", "Swimming Pool", "Electricity"];
 const ACTIVITIES_LIST = ["Trekking", "Camping", "Rock Climbing", "River Rafting", "Cycling", "Bird Watching"];

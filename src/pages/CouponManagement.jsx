@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./CouponManagement.css"; // Custom CSS
 
-const API = "http://localhost:9000/api/admin";
+const API = "https://bmtadmin.onrender.com/api/admin";
 
 function CouponLog() {
   const [logs, setLogs] = useState([]);

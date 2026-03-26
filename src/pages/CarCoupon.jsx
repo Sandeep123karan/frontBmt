@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./CarCoupon.css";
 
-const API = "http://localhost:9000/api/car-coupons";
+const API = "https://bmtadmin.onrender.com/api/car-coupons";
 
 function CarCoupon() {
   const [coupons, setCoupons] = useState([]);

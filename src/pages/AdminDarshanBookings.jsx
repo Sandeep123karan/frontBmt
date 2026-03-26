@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const API = "http://localhost:9000/api/darshan-bookings";
+const API = "https://bmtadmin.onrender.com/api/darshan-bookings";
 
 function AdminDarshanBookings() {
   const [bookings, setBookings] = useState([]);

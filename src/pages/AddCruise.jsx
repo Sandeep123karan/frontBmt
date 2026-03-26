@@ -127,7 +127,7 @@ function AddCruise() {
         if (formData[key]) fd.append(key, formData[key]);
       });
 
-      await axios.post("http://localhost:9000/api/cruises", fd);
+      await axios.post("https://bmtadmin.onrender.com/api/cruises", fd);
 
       setMsg("Cruise Added Successfully!");
       setFormData({

@@ -12,7 +12,7 @@
 //     });
 
 //     const fetchApplications = async () => {
-//         const res = await fetch('http://localhost:9000/api/visaApplications');
+//         const res = await fetch('https://bmtadmin.onrender.com/api/visaApplications');
 //         const data = await res.json();
 //         setApplications(data);
 //     };
@@ -27,7 +27,7 @@
 
 //     const handleSubmit = async (e) => {
 //         e.preventDefault();
-//         await fetch('http://localhost:9000/api/visaApplications', {
+//         await fetch('https://bmtadmin.onrender.com/api/visaApplications', {
 //             method: 'POST',
 //             headers: { 'Content-Type': 'application/json' },
 //             body: JSON.stringify(form),
@@ -43,7 +43,7 @@
 //     };
 
 //     const handleDelete = async (id) => {
-//         await fetch(`http://localhost:9000/api/visaApplications/${id}`, { method: 'DELETE' });
+//         await fetch(`https://bmtadmin.onrender.com/api/visaApplications/${id}`, { method: 'DELETE' });
 //         fetchApplications();
 //     };
 
@@ -86,7 +86,7 @@ function VisaApplications() {
     });
 
     const fetchApplications = async () => {
-        const res = await fetch('http://localhost:9000/api/visaApplications');
+        const res = await fetch('https://bmtadmin.onrender.com/api/visaApplications');
         const data = await res.json();
         setApplications(data);
     };
@@ -101,7 +101,7 @@ function VisaApplications() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        await fetch('http://localhost:9000/api/visaApplications', {
+        await fetch('https://bmtadmin.onrender.com/api/visaApplications', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(form),
@@ -120,7 +120,7 @@ function VisaApplications() {
     };
 
     const handleDelete = async (id) => {
-        await fetch(`http://localhost:9000/api/visaApplications/${id}`, {
+        await fetch(`https://bmtadmin.onrender.com/api/visaApplications/${id}`, {
             method: 'DELETE'
         });
         fetchApplications();

@@ -123,7 +123,7 @@ function AddActivity() {
 
   const [preview, setPreview] = useState(null);
   const [loading, setLoading] = useState(false);
-  const API = "http://localhost:9000/api/activities";
+  const API = "https://bmtadmin.onrender.com/api/activities";
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;

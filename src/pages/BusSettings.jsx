@@ -142,7 +142,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const API = "http://localhost:9000/api/bus-settings";
+const API = "https://bmtadmin.onrender.com/api/bus-settings";
 
 const BusSettings = () => {
   const [settings, setSettings] = useState([]);

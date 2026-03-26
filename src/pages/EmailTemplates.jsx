@@ -18,7 +18,7 @@ function EmailTemplates() {
 
   const fetchTemplates = async () => {
     try {
-      const res = await fetch("http://localhost:9000/api/email-templates");
+      const res = await fetch("https://bmtadmin.onrender.com/api/email-templates");
       const data = await res.json();
       setTemplates(data);
     } catch (err) {
@@ -29,8 +29,8 @@ function EmailTemplates() {
   const handleSubmit = async () => {
     try {
       const url = editId
-        ? `http://localhost:9000/api/email-templates/${editId}`
-        : "http://localhost:9000/api/email-templates";
+        ? `https://bmtadmin.onrender.com/api/email-templates/${editId}`
+        : "https://bmtadmin.onrender.com/api/email-templates";
 
       const method = editId ? "PUT" : "POST";
 
@@ -62,7 +62,7 @@ function EmailTemplates() {
 
   const handleDelete = async (id) => {
     try {
-      await fetch(`http://localhost:9000/api/email-templates/${id}`, {
+      await fetch(`https://bmtadmin.onrender.com/api/email-templates/${id}`, {
         method: "DELETE",
       });
       fetchTemplates();

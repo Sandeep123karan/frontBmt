@@ -21,7 +21,7 @@
 
 //   const fetchFees = async () => {
 //     try {
-//       const res = await axios.get("http://localhost:9000/api/convenience-fees");
+//       const res = await axios.get("https://bmtadmin.onrender.com/api/convenience-fees");
 //       setFees(res.data);
 //     } catch (err) {
 //       console.error("Error:", err);
@@ -39,7 +39,7 @@
 
 //   const handleSubmit = async () => {
 //     try {
-//       await axios.post("http://localhost:9000/api/convenience-fees", formData);
+//       await axios.post("https://bmtadmin.onrender.com/api/convenience-fees", formData);
 //       fetchFees();
 //       setShowForm(false);
 //       setFormData({
@@ -135,7 +135,7 @@ function ConvenienceFee() {
 
   const fetchFees = async () => {
     try {
-      const res = await axios.get("http://localhost:9000/api/convenience-fees");
+      const res = await axios.get("https://bmtadmin.onrender.com/api/convenience-fees");
       setFees(res.data);
     } catch (err) {
       console.error("Error fetching fees:", err);
@@ -144,7 +144,7 @@ function ConvenienceFee() {
 
   const fetchAirlines = async () => {
     try {
-      const res = await axios.get("http://localhost:9000/api/world-airlines");
+      const res = await axios.get("https://bmtadmin.onrender.com/api/world-airlines");
       setAirlines(res.data);
     } catch (err) {
       console.error("Error fetching airlines:", err);
@@ -164,9 +164,9 @@ function ConvenienceFee() {
 
     try {
       if (editId) {
-        await axios.put(`http://localhost:9000/api/convenience-fees/${editId}`, payload);
+        await axios.put(`https://bmtadmin.onrender.com/api/convenience-fees/${editId}`, payload);
       } else {
-        await axios.post("http://localhost:9000/api/convenience-fees", payload);
+        await axios.post("https://bmtadmin.onrender.com/api/convenience-fees", payload);
       }
       resetForm();
       fetchFees();
@@ -193,7 +193,7 @@ function ConvenienceFee() {
 
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this fee?")) {
-      await axios.delete(`http://localhost:9000/api/convenience-fees/${id}`);
+      await axios.delete(`https://bmtadmin.onrender.com/api/convenience-fees/${id}`);
       fetchFees();
     }
   };

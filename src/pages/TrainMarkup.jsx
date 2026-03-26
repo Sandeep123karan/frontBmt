@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const API = "http://localhost:9000/api/train-markups";
+const API = "https://bmtadmin.onrender.com/api/train-markups";
 
 export default function TrainMarkupList() {
   const [list, setList] = useState([]);

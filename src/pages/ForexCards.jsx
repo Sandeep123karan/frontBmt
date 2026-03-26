@@ -1,7 +1,7 @@
 // import React, { useEffect, useState } from "react";
 // import axios from "axios";
 
-// const API = axios.create({ baseURL: "http://localhost:9000/api" });
+// const API = axios.create({ baseURL: "https://bmtadmin.onrender.com/api" });
 
 // export default function ForexCardPage() {
 //   const [cards, setCards] = useState([]);
@@ -67,7 +67,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const API = axios.create({ baseURL: "http://localhost:9000/api" });
+const API = axios.create({ baseURL: "https://bmtadmin.onrender.com/api" });
 
 export default function ForexCardPage() {
   const [cards, setCards] = useState([]);

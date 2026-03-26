@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./MenuManagement.css";
 
-const API = "http://localhost:9000/api/admin/menus";
+const API = "https://bmtadmin.onrender.com/api/admin/menus";
 
 function Menu() {
   const [form, setForm] = useState({ label: "", url: "", status: true });

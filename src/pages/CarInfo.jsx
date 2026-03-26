@@ -18,7 +18,7 @@
 
 // //   const fetchCars = async () => {
 // //     try {
-// //       const res = await axios.get("http://localhost:9000/api/");
+// //       const res = await axios.get("https://bmtadmin.onrender.com/api/");
 // //       setCars(res.data);
 // //     } catch (err) {
 // //       console.error("Fetch failed:", err);
@@ -27,7 +27,7 @@
 
 // //   const addCar = async () => {
 // //     try {
-// //       await axios.post("http://localhost:9000/api/add-car", form);
+// //       await axios.post("https://bmtadmin.onrender.com/api/add-car", form);
 // //       setForm({
 // //         carName: "",
 // //         carModel: "",
@@ -48,7 +48,7 @@
 
 // //   const deleteCar = async (id) => {
 // //     try {
-// //       await axios.delete(`http://localhost:9000/api/car/${id}`);
+// //       await axios.delete(`https://bmtadmin.onrender.com/api/car/${id}`);
 // //       fetchCars();
 // //     } catch (err) {
 // //       console.error("Delete failed:", err);
@@ -112,7 +112,7 @@
 // // import React, { useEffect, useState } from "react";
 // // import axios from "axios";
 
-// // const API = "http://localhost:9000/api";
+// // const API = "https://bmtadmin.onrender.com/api";
 
 // // const CarInfoList = () => {
 // //   const [cars, setCars] = useState([]);
@@ -252,7 +252,7 @@
 // // import React, { useEffect, useState } from "react";
 // // import axios from "axios";
 
-// // const API = "http://localhost:9000/api";
+// // const API = "https://bmtadmin.onrender.com/api";
 
 // // const CarInfoList = () => {
 // //   const [cars, setCars] = useState([]);
@@ -452,7 +452,7 @@
 // import React, { useEffect, useState } from "react";
 // import axios from "axios";
 
-// const API = "http://localhost:9000/api";
+// const API = "https://bmtadmin.onrender.com/api";
 
 // function CarInfoList() {
 //   const [cars, setCars] = useState([]);
@@ -652,7 +652,7 @@
 // import React, { useEffect, useState } from "react";
 // import axios from "axios";
 
-// const API = "http://localhost:9000/api";
+// const API = "https://bmtadmin.onrender.com/api";
 
 // function CarManagement() {
 
@@ -823,7 +823,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const API = "http://localhost:9000/api";
+const API = "https://bmtadmin.onrender.com/api";
 
 function CarManagement() {
 

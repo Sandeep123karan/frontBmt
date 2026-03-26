@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const BASE_URL = "http://localhost:9000/api/train-routes";
+const BASE_URL = "https://bmtadmin.onrender.com/api/train-routes";
 
 export default function TrainRouteList() {
   const [routes, setRoutes] = useState([]);

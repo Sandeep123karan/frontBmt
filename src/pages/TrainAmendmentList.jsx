@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 
-const API = "http://localhost:9000/api/train-amendments";
+const API = "https://bmtadmin.onrender.com/api/train-amendments";
 
 export default function TrainAmendmentList() {
   const [list, setList] = useState([]);

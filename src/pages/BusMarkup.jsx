@@ -59,7 +59,7 @@ const BusMarkup = () => {
   }, []);
 
   const fetchMarkups = async () => {
-    const res = await axios.get("http://localhost:9000/api/bus-markups");
+    const res = await axios.get("https://bmtadmin.onrender.com/api/bus-markups");
     setMarkups(res.data);
   };
 
@@ -72,10 +72,10 @@ const BusMarkup = () => {
     };
 
     if (editId) {
-      await axios.put(`http://localhost:9000/api/bus-markups/${editId}`, payload);
+      await axios.put(`https://bmtadmin.onrender.com/api/bus-markups/${editId}`, payload);
       setEditId(null);
     } else {
-      await axios.post("http://localhost:9000/api/bus-markups", payload);
+      await axios.post("https://bmtadmin.onrender.com/api/bus-markups", payload);
     }
 
     setForm({ type: "percentage", value: "" });
@@ -88,7 +88,7 @@ const BusMarkup = () => {
   };
 
   const deleteMarkup = async (id) => {
-    await axios.delete(`http://localhost:9000/api/bus-markups/${id}`);
+    await axios.delete(`https://bmtadmin.onrender.com/api/bus-markups/${id}`);
     fetchMarkups();
   };
 

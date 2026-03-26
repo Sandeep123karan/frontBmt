@@ -3,7 +3,7 @@ import { useState, useEffect, useCallback } from "react";
 /* ─────────────────────────────────────────────────────────
    CONFIG — apna URL aur token key yahan change karo
 ───────────────────────────────────────────────────────── */
-const API = "http://localhost:9000/api/holidayparks";
+const API = "https://bmtadmin.onrender.com/api/holidayparks";
 const getToken = () => localStorage.getItem("adminToken") || "";
 
 /* ─────────────────────────────────────────────────────────

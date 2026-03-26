@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-const API = "http://localhost:9000/api/houseboat";
+const API = "https://bmtadmin.onrender.com/api/houseboat";
 const PER_PAGE = 8;
 
 const AMENITIES_LIST = ["WiFi","AC","TV","Parking","Hot Water","Room Service","Laundry","Kitchen","CCTV","Power Backup","Geyser","Refrigerator","Life Jackets","Fire Extinguisher","First Aid","Sun Deck","Fishing Equipment","Kayak"];

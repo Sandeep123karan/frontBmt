@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const API = "http://localhost:9000/api/guesthouses";
+const API = "https://bmtadmin.onrender.com/api/guesthouses";
 const PER_PAGE = 8;
 
 const AMENITIES_LIST = [

@@ -11,7 +11,7 @@ const TrainList = () => {
   const fetchTrains = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:9000/api/trains", {
+      const res = await axios.get("https://bmtadmin.onrender.com/api/trains", {
         params: {
           from,
           to,

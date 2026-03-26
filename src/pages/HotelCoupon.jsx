@@ -174,7 +174,7 @@
 import React, { useState, useEffect } from "react";
 import "./HotelCoupon.css";
 
-const API = "http://localhost:9000/api/hotel-coupons";
+const API = "https://bmtadmin.onrender.com/api/hotel-coupons";
 
 function HotelCoupon() {
   const [coupons, setCoupons] = useState([]);

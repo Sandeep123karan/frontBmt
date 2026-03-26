@@ -223,6 +223,7 @@ export default function AdminSettingsLayout() {
 {dropdownOpen === "vacationhouse" && !isCollapsed && (
   <div className="dropdown-menu">
     {renderDropdownItem("/admin/vacationhouse-management", "Vacation House List", List)}
+    {renderDropdownItem("/admin/vacation-bookings", "Vacation Bookings", Calendar)}
   </div>
 )}
 {/* Farmstay Management */}
@@ -239,6 +240,7 @@ export default function AdminSettingsLayout() {
 {dropdownOpen === "farmstay" && !isCollapsed && (
   <div className="dropdown-menu">
     {renderDropdownItem("/admin/farmstay-management", "Farmstay List", List)}
+    {renderDropdownItem("/admin/farmstay-bookings", "Farmstay Bookings", Calendar)}
   </div>
 )}
 {/* Love Hotel Management */}
@@ -255,6 +257,7 @@ export default function AdminSettingsLayout() {
 {dropdownOpen === "lovehotel" && !isCollapsed && (
   <div className="dropdown-menu">
     {renderDropdownItem("/admin/lovehotel-management", "Love Hotel List", List)}
+     {renderDropdownItem("/admin/lovehotel-bookings", "Love Hotel Bookings", Calendar)}
   </div>
 )}
           {/* Motel Management */}
@@ -271,6 +274,7 @@ export default function AdminSettingsLayout() {
 {dropdownOpen === "motel" && !isCollapsed && (
   <div className="dropdown-menu">
     {renderDropdownItem("/admin/motel-management", "Motel List", List)}
+      {renderDropdownItem("/admin/motel-bookings", "Motel Bookings", Calendar)}
   </div>
 )}
 {/* Hostel Management */}
@@ -287,6 +291,7 @@ export default function AdminSettingsLayout() {
 {dropdownOpen === "hostel" && !isCollapsed && (
   <div className="dropdown-menu">
     {renderDropdownItem("/admin/hostel-management", "Hostel List", List)}
+      {renderDropdownItem("/admin/hostel-booking", "Hostel Booking", Calendar)}
   </div>
 )}
 
@@ -330,6 +335,7 @@ export default function AdminSettingsLayout() {
 {dropdownOpen === "place" && !isCollapsed && (
   <div className="dropdown-menu">
     {renderDropdownItem("/admin/place-management", "Place List", List)}
+     {renderDropdownItem("/admin/place-bookings", "Place Bookings", Calendar)}
   </div>
 )}
 
@@ -351,7 +357,7 @@ export default function AdminSettingsLayout() {
           
 
           {/* Hotel Management */}
-          <div className="sidebar-item dropdown-toggle" onClick={() => handleDropdownToggle('hotel')}>
+          {/* <div className="sidebar-item dropdown-toggle" onClick={() => handleDropdownToggle('hotel')}>
             <Hotel className="icon" /> 
             {!isCollapsed && 'Hotel Management'} 
             {!isCollapsed && (dropdownOpen === 'hotel' ? <ChevronUp /> : <ChevronDown />)}
@@ -365,7 +371,7 @@ export default function AdminSettingsLayout() {
               {renderDropdownItem("/admin/hotels/uploads", "Hotel Uploads", UploadCloud)}
               {renderDropdownItem("/admin/hotels/coupon-list", "Hotel Coupon List", Ticket)}
             </div>
-          )}
+          )} */}
           
           {/* Homestay Management */}
 <div
@@ -381,6 +387,8 @@ export default function AdminSettingsLayout() {
 {dropdownOpen === "homestay" && !isCollapsed && (
   <div className="dropdown-menu">
     {renderDropdownItem("/admin/homestay-management", "Homestay List", List)}
+     {renderDropdownItem("/admin/homestay-bookings", "Homestay Bookings", Calendar)}
+
   </div>
 )}
 {/* Houseboat Management */}
@@ -397,6 +405,8 @@ export default function AdminSettingsLayout() {
 {dropdownOpen === "houseboat" && !isCollapsed && (
   <div className="dropdown-menu">
     {renderDropdownItem("/admin/houseboat-management", "Houseboat List", List)}
+     {renderDropdownItem("/admin/houseboat-bookings", "Houseboat Bookings", Calendar)}
+     
   </div>
 )}
           {/* Apartment Management */}
@@ -413,6 +423,7 @@ export default function AdminSettingsLayout() {
 {dropdownOpen === "apartment" && !isCollapsed && (
   <div className="dropdown-menu">
     {renderDropdownItem("/admin/apartment-management", "Apartment List", List)}
+    {renderDropdownItem("/admin/admin-bookings", "All Bookings List", Calendar)}
   </div>
 )}
 {/* Guesthouse Management */}
@@ -429,6 +440,7 @@ export default function AdminSettingsLayout() {
 {dropdownOpen === "guesthouse" && !isCollapsed && (
   <div className="dropdown-menu">
     {renderDropdownItem("/admin/guesthouse-management", "Guest House List", List)}
+    {renderDropdownItem("/admin/guesthouse-bookings", "Guest House Bookings", Calendar)}
   </div>
 )}
 {/* Lounge Management */}
@@ -445,6 +457,7 @@ export default function AdminSettingsLayout() {
 {dropdownOpen === "lounge" && !isCollapsed && (
   <div className="dropdown-menu">
     {renderDropdownItem("/admin/lounge-management", "Lounge List", List)}
+     {renderDropdownItem("/admin/lounge-bookings", "Lounge Bookings", Calendar)}
   </div>
 )}
 
@@ -462,6 +475,7 @@ export default function AdminSettingsLayout() {
 {dropdownOpen === "resort" && !isCollapsed && (
   <div className="dropdown-menu">
     {renderDropdownItem("/admin/resort-management", "Resort List", List)}
+     {renderDropdownItem("/admin/resort-bookings", "Resort Bookings", Calendar)}
   </div>
 )}
 

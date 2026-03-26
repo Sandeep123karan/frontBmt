@@ -9,7 +9,7 @@ function HolidayList() {
   const [showForm, setShowForm] = useState(false);
 
   const fetchData = async () => {
-    const res = await axios.get("http://localhost:9000/api/holidays");
+    const res = await axios.get("https://bmtadmin.onrender.com/api/holidays");
     setHolidays(res.data);
   };
 
@@ -20,9 +20,9 @@ function HolidayList() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (editId) {
-      await axios.put(`http://localhost:9000/api/holidays/${editId}`, form);
+      await axios.put(`https://bmtadmin.onrender.com/api/holidays/${editId}`, form);
     } else {
-      await axios.post("http://localhost:9000/api/holidays", form);
+      await axios.post("https://bmtadmin.onrender.com/api/holidays", form);
     }
     setForm({ packageName: '', date: '', type: '', showOnHome: 'Yes', standardPrice: '', deluxePrice: '', luxuryPrice: '', status: 'Active' });
     setEditId(null);
@@ -31,7 +31,7 @@ function HolidayList() {
   };
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:9000/api/holidays/${id}`);
+    await axios.delete(`https://bmtadmin.onrender.com/api/holidays/${id}`);
     fetchData();
   };
 

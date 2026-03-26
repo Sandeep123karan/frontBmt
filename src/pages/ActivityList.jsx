@@ -94,7 +94,7 @@ import { Edit, Trash2, PlusCircle } from "lucide-react";
 function ActivityList() {
   const [activities, setActivities] = useState([]);
 
-  const API = "http://localhost:9000/api/activities";
+  const API = "https://bmtadmin.onrender.com/api/activities";
 
   // Fetch Activities from backend
   const fetchActivities = async () => {

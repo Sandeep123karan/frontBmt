@@ -15,7 +15,7 @@ function ForexMarkup() {
   // Fetch markups
   const fetchMarkups = async () => {
     try {
-      const res = await axios.get("http://localhost:9000/api/forex-markups");
+      const res = await axios.get("https://bmtadmin.onrender.com/api/forex-markups");
       setMarkups(res.data);
     } catch (err) {
       console.error(err);
@@ -46,7 +46,7 @@ function ForexMarkup() {
   // Delete markup
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:9000/api/forex-markups/${id}`);
+      await axios.delete(`https://bmtadmin.onrender.com/api/forex-markups/${id}`);
       setMarkups(markups.filter((m) => m._id !== id));
     } catch (err) {
       console.error(err);
@@ -59,11 +59,11 @@ function ForexMarkup() {
     try {
       if (editingMarkup) {
         await axios.put(
-          `http://localhost:9000/api/forex-markups/${editingMarkup._id}`,
+          `https://bmtadmin.onrender.com/api/forex-markups/${editingMarkup._id}`,
           formData
         );
       } else {
-        await axios.post("http://localhost:9000/api/forex-markups", formData);
+        await axios.post("https://bmtadmin.onrender.com/api/forex-markups", formData);
       }
       setShowForm(false);
       setEditingMarkup(null);

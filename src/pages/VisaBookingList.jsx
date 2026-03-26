@@ -79,7 +79,7 @@ function VisaBookingList() {
 
   const fetchBookings = async () => {
     try {
-      const response = await fetch("http://localhost:9000/api/visaApplications");
+      const response = await fetch("https://bmtadmin.onrender.com/api/visaApplications");
       const data = await response.json();
       setBookings(data);
       setLoading(false);

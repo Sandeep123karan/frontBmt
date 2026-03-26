@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const API_URL = "http://localhost:9000/api/bus-amendments";
+const API_URL = "https://bmtadmin.onrender.com/api/bus-amendments";
 
 function BusAmendmentList() {
   const [data, setData] = useState([]);

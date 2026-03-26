@@ -130,7 +130,7 @@ import axios from "axios";
 import "./ContactUs.css";
 
 // 🔥 Set Backend Base URL Here
-axios.defaults.baseURL = "http://localhost:9000";
+axios.defaults.baseURL = "https://bmtadmin.onrender.com";
 
 function ContactUs() {
   const [contacts, setContacts] = useState([]);

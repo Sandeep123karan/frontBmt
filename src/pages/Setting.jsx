@@ -56,7 +56,7 @@
 //         formDataToSend.append(key, value);
 //       });
 
-//       await fetch("http://localhost:9000/api/company-setting", {
+//       await fetch("https://bmtadmin.onrender.com/api/company-setting", {
 //         method: "POST",
 //         body: formDataToSend,
 //       });

@@ -99,7 +99,7 @@ function VisaStatusTracker() {
   // Fetch data from backend
   const fetchStatus = async () => {
     try {
-      const res = await fetch("http://localhost:9000/api/visaApplications");
+      const res = await fetch("https://bmtadmin.onrender.com/api/visaApplications");
       const data = await res.json();
       setVisaStatus(data);
     } catch (error) {

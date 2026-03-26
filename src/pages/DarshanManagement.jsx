@@ -3,7 +3,7 @@
 // import React, { useEffect, useState } from "react";
 // import axios from "axios";
 
-// const API_URL = "http://localhost:9000/api/darshans";
+// const API_URL = "https://bmtadmin.onrender.com/api/darshans";
 
 // function DarshanManagement() {
 //   const [darshans, setDarshans] = useState([]);
@@ -258,7 +258,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const API_URL = "http://localhost:9000/api/darshans";
+const API_URL = "https://bmtadmin.onrender.com/api/darshans";
 
 function DarshanManagement() {
   const [darshans, setDarshans] = useState([]);

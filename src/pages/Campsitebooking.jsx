@@ -3,7 +3,7 @@ import { useState, useEffect, useCallback } from "react";
 /* ============================================================
    API CONFIG — apna token aur base URL yahan lagao
 ============================================================ */
-const API_BASE = "http://localhost:9000/api/bookings";
+const API_BASE = "https://bmtadmin.onrender.com/api/bookings";
 const token = () => localStorage.getItem("token");
 
 const api = {

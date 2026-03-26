@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 /* ─── CONFIG ─── */
-const API = "http://localhost:9000/api"; // change to your base URL
+const API = "https://bmtadmin.onrender.com/api"; // change to your base URL
 // const token = () => localStorage.getItem("token") || "";
 
 const token = () => localStorage.getItem("adminToken") || "";

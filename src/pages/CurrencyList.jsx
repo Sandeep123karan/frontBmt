@@ -8,7 +8,7 @@ const CurrencyList = () => {
 
   
   const fetchCurrencies = async () => {
-    const res = await axios.get("http://localhost:9000/api/currencies");
+    const res = await axios.get("https://bmtadmin.onrender.com/api/currencies");
     setCurrencies(res.data);
   };
 
@@ -19,9 +19,9 @@ const CurrencyList = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (editingId) {
-      await axios.put(`http://localhost:9000/api/currencies/${editingId}`, form);
+      await axios.put(`https://bmtadmin.onrender.com/api/currencies/${editingId}`, form);
     } else {
-      await axios.post("http://localhost:9000/api/currencies", form);
+      await axios.post("https://bmtadmin.onrender.com/api/currencies", form);
     }
     setForm({ code: "", name: "", symbol: "" });
     setEditingId(null);
@@ -34,7 +34,7 @@ const CurrencyList = () => {
   };
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:9000/api/currencies/${id}`);
+    await axios.delete(`https://bmtadmin.onrender.com/api/currencies/${id}`);
     fetchCurrencies();
   };
 

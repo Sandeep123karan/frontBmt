@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-const API_BASE = "http://localhost:9000/api/farmstay"; // apna URL yahan daalo
+const API_BASE = "https://bmtadmin.onrender.com/api/farmstay"; // apna URL yahan daalo
 
 /* ─── tiny toast ─── */
 function Toast({ msg, type, onClose }) {

@@ -91,7 +91,7 @@ function BlogCategory() {
             <tr key={cat._id}>
               <td>
                 <img
-                  src={`http://localhost:9000/uploads/${cat.image}`}
+                  src={`https://bmtadmin.onrender.com/uploads/${cat.image}`}
                   alt="category"
                   height="40"
                 />

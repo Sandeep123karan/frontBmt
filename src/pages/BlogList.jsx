@@ -7,12 +7,12 @@ function BlogList() {
   const [blogs, setBlogs] = useState([]);
 
   const fetchBlogs = async () => {
-    const res = await axios.get("http://localhost:9000/api/blogs");
+    const res = await axios.get("https://bmtadmin.onrender.com/api/blogs");
     setBlogs(res.data);
   };
 
   const deleteBlog = async (id) => {
-    await axios.delete(`http://localhost:9000/api/blogs/${id}`);
+    await axios.delete(`https://bmtadmin.onrender.com/api/blogs/${id}`);
     fetchBlogs();
   };
 

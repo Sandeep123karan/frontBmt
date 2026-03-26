@@ -6,7 +6,7 @@ import axios from "axios";
 
 function InsuranceBookingForm() {
 
-const API = "http://localhost:9000/api/insurance-bookings";
+const API = "https://bmtadmin.onrender.com/api/insurance-bookings";
 
 const emptyForm = {
 plan:{ name:"", premium:"" },

@@ -93,7 +93,7 @@ function VisaSettings() {
   // Fetch settings from backend
   const loadSettings = async () => {
     try {
-      const res = await fetch("http://localhost:9000/api/visa-settings");
+      const res = await fetch("https://bmtadmin.onrender.com/api/visa-settings");
       const data = await res.json();
       setSettings(data);
     } catch (err) {
@@ -121,7 +121,7 @@ function VisaSettings() {
   const saveSettings = async () => {
     setSaving(true);
     try {
-      await fetch("http://localhost:9000/api/visa-settings", {
+      await fetch("https://bmtadmin.onrender.com/api/visa-settings", {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(settings),

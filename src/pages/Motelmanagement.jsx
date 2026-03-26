@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-const API = "http://localhost:9000/api/motel";
+const API = "https://bmtadmin.onrender.com/api/motel";
 const PER_PAGE = 8;
 
 const AMENITIES_LIST = [

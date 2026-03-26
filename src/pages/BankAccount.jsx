@@ -20,7 +20,7 @@ const BankAccount = () => {
 
   const fetchAccounts = async () => {
     try {
-      const res = await axios.get("http://localhost:9000/api/bank-accounts");
+      const res = await axios.get("https://bmtadmin.onrender.com/api/bank-accounts");
       setAccounts(res.data);
     } catch (err) {
       console.error("Fetch Error:", err);
@@ -33,7 +33,7 @@ const BankAccount = () => {
 
   const handleSubmit = async () => {
     try {
-      await axios.post("http://localhost:9000/api/bank-accounts", formData);
+      await axios.post("https://bmtadmin.onrender.com/api/bank-accounts", formData);
       fetchAccounts();
       setShowForm(false);
       setFormData({

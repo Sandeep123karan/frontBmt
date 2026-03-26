@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const API = "http://localhost:9000/api/resorts";
+const API = "https://bmtadmin.onrender.com/api/resorts";
 
 const AMENITIES_LIST = ["WiFi", "Pool", "Spa", "Gym", "Restaurant", "Bar", "Parking", "AC", "Room Service", "Laundry", "Kids Play Area", "Conference Room"];
 const FOOD_OPTIONS = ["Breakfast Included", "Half Board", "Full Board", "All Inclusive", "Room Only"];

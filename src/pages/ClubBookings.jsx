@@ -1,7 +1,7 @@
 // import React, { useEffect, useState } from "react";
 // import axios from "axios";
 
-// const API_URL = "http://localhost:9000/api/bookings";
+// const API_URL = "https://bmtadmin.onrender.com/api/bookings";
 
 // const ClubBookings = () => {
 //   const [bookings, setBookings] = useState([]);
@@ -85,7 +85,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:9000/api",
+  baseURL: "https://bmtadmin.onrender.com/api",
 });
 
 const ClubBookings = () => {

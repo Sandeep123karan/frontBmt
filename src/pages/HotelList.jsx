@@ -14,7 +14,7 @@
 //       setLoading(true);
 //       setError("");
 
-//       const res = await axios.get("http://localhost:9000/api/hotels");
+//       const res = await axios.get("https://bmtadmin.onrender.com/api/hotels");
 
 //       setHotels(res.data);
 
@@ -86,7 +86,7 @@ function HotelList() {
       setLoading(true);
       setError("");
 
-      const res = await axios.get("http://localhost:9000/api/hotels");
+      const res = await axios.get("https://bmtadmin.onrender.com/api/hotels/all");
       setHotels(res.data);
 
     } catch (err) {

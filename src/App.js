@@ -173,7 +173,18 @@ import Vacationhouseadmin from "./pages/Vacationhouseadmin";
 import Campsitebooking from "./pages/Campsitebooking";
 import Holidayparkapp from "./pages/Holidayparkapp";
 import Motelbookingapp from "./pages/Motelbookingapp";
-
+import Adminvactionbookings from "./pages/Adminvactionbookings";
+import Adminfarmstaybookingdashboard from "./pages/Adminfarmstaybookingdashboard";
+import Lovehoteladmindashboard from "./pages/Lovehoteladmindashboard";
+import Adminmotelbookings from "./pages/Adminmotelbookings";
+import Hostelbookingapp from "./pages/Hostelbookingapp";
+import Adminplacebookings from "./pages/Adminplacebookings";
+import Homestaybookingslist from './pages/Homestaybookingslist';
+import Houseboatbookings from './pages/Houseboatbookings';
+import Adminbookings from './pages/Adminbookings';
+import Adminguesthousebookings from './pages/Adminguesthousebookings';
+import Adminloungebookings from './pages/Adminloungebookings';
+import Adminresortbookings from './pages/Adminresortbookings';
 
 
 function App() {
@@ -197,6 +208,7 @@ function App() {
             <Route element={<ProtectedRoute />}></Route>
       <Route path="payments" element={<AdminPayments />} />
             <Route path="dashboard" element={<Dashboard />} />
+              <Route path="vacation-bookings" element={<Adminvactionbookings />} />
             
             {/* Settings Routes */}
             <Route path="setting" element={<Setting />} />
@@ -209,6 +221,8 @@ function App() {
             <Route path="bank-account" element={<BankAccount />} />
             <Route path="agent-notification" element={<AgentNotification />} />
             <Route path="email-templates" element={<EmailTemplates />} />
+            <Route path="lovehotel-bookings" element={<Lovehoteladmindashboard />} />
+            <Route path="motel-bookings" element={<Adminmotelbookings />} />
 
             {/* Account Management Routes */}
             <Route path="AgentPaymentHistory" element={<AgentPaymentHistory />} />
@@ -232,6 +246,8 @@ function App() {
             <Route path="flights/import-tickets" element={<ImportTickets />} />
             <Route path="flights/flight-log-tracker" element={<FlightLogTracker />} />
             <Route path="flights/flight-query-list" element={<FlightQueryList />} />
+            <Route path="hostel-booking" element={<Hostelbookingapp />} />
+            
                 
             {/* Flight Extranet Management Routes */}
             <Route path="Extranet/add-inventory" element={<AddInventory />} />
@@ -251,6 +267,7 @@ function App() {
             <Route path="hotel-extranet/add-hotel" element={<AddHotel />} />
             <Route path="hotel-extranet/hotel-list" element={<HotelList />} />
             <Route path="hotel-extranet/hotel-settings" element={<HotelSettings />} />
+            <Route path="houseboat-bookings" element={<Houseboatbookings />} />
 
             {/* Holiday Management Routes */}
             <Route path="holidays/holiday-list" element={<HolidayList />} />
@@ -262,6 +279,7 @@ function App() {
             <Route path="holidays/discount" element={<HolidayDiscount />} />
             <Route path="holidays/coupon-list" element={<HolidayCouponList />} />
             <Route path="holidays/themes-list" element={<HolidayThemeList />} />
+            <Route path="resort-bookings" element={<Adminresortbookings />} />
 
             {/* Car Management Routes */}
             <Route path="car/info-list" element={<CarInfo />} />
@@ -294,6 +312,7 @@ function App() {
             <Route path="train/settings" element={<TrainSettings />} />
             <Route path="train/pnr-status" element={<PNRStatusCheck />} />
             <Route path="train-list-management" element={<TrainList />} /> {/* Keep existing route */}
+            <Route path="guesthouse-bookings" element={<Adminguesthousebookings />} />
 
             {/* Currency & Forex Management Routes - NEW */}
             <Route path="forex/exchange-rates" element={<ExchangeRates />} />
@@ -303,6 +322,7 @@ function App() {
             <Route path="forex/booking-list" element={<ForexBookingList />} />
             <Route path="forex/markup" element={<ForexMarkup />} />
             <Route path="forex/settings" element={<ForexSettings />} />
+            <Route path="place-bookings" element={<Adminplacebookings />} />
 
             {/* Visa Management Routes - NEW */}
             <Route path="visa/country-list" element={<VisaCountryList />} />
@@ -322,6 +342,7 @@ function App() {
             <Route path="insurance/providers" element={<InsuranceProviders />} />
             <Route path="insurance/markup" element={<InsuranceMarkup />} />
             <Route path="insurance/settings" element={<InsuranceSettings />} />
+            <Route path="admin-bookings" element={<Adminbookings />} />
 
             {/* Coupon Management Routes */}
             <Route path="coupon/log" element={<CouponManagement />} />
@@ -361,8 +382,12 @@ function App() {
 <Route path="holidaypark-management" element={<Holidayparkpanel />} />
 <Route path="holidaypark-app" element={<Holidayparkapp />} />
 <Route path="farmstay-management" element={<Farmstayadmin />} />
+<Route path="farmstay-bookings" element={<Adminfarmstaybookingdashboard />} />
+<Route path="vacationhouse-management" element={<Vacationhouseadmin />} />
 <Route path="vacationhouse-management" element={<Vacationhouseadmin />} />
 <Route path="motel-booking" element={<Motelbookingapp />} />
+<Route path="homestay-bookings" element={<Homestaybookingslist />} />
+<Route path="lounge-bookings" element={<Adminloungebookings />} />
 
 
 {/* <Route path="darshan">
@@ -411,6 +436,7 @@ function App() {
             {/* Newsletter and Feedback Routes */}
             <Route path="newsletter" element={<NewsLetter />} />
             <Route path="feedback-management" element={<FeedbackManagement />} />
+            
 
             {/* Other Routes */}
             <Route path="hotels" element={<Hotels />} />

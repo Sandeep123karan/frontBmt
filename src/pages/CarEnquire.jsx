@@ -20,12 +20,12 @@
 //     if (fromDate) query.append('fromDate', fromDate);
 //     if (toDate) query.append('toDate', toDate);
 
-//     const res = await axios.get(`http://localhost:9000/api/car-enquiries?${query}`);
+//     const res = await axios.get(`https://bmtadmin.onrender.com/api/car-enquiries?${query}`);
 //     setData(res.data);
 //   };
 
 //   const handleDelete = async (id) => {
-//     await axios.delete(`http://localhost:9000/api/car-enquiries/${id}`);
+//     await axios.delete(`https://bmtadmin.onrender.com/api/car-enquiries/${id}`);
 //     fetchData();
 //   };
 

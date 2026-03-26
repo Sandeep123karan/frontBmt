@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-const API = "http://localhost:9000/api/vacationhouses"; // apna URL change karo
+const API = "https://bmtadmin.onrender.com/api/vacationhouses"; // apna URL change karo
 
 const AMENITIES_LIST = [
   "WiFi", "AC", "Swimming Pool", "Parking", "Kitchen", "TV",

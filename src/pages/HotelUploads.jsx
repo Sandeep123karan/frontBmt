@@ -2,7 +2,7 @@
 // import axios from "axios";
 // import "./HotelUploads.css";
 
-// const API_BASE = "http://localhost:9000/api/hotel-tickets";
+// const API_BASE = "https://bmtadmin.onrender.com/api/hotel-tickets";
 
 // function HotelUploads() {
 //   const [formData, setFormData] = useState({
@@ -178,7 +178,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./HotelUploads.css";
 
-const API_BASE = "http://localhost:9000/api/hotel-tickets";
+const API_BASE = "https://bmtadmin.onrender.com/api/hotel-tickets";
 
 function HotelUploads() {
   const [formData, setFormData] = useState({

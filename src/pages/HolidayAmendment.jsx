@@ -24,7 +24,7 @@
 //   const [editId, setEditId] = useState(null);
 
 //   const fetchData = async () => {
-//     const res = await axios.get("http://localhost:9000/api/holiday-amendments");
+//     const res = await axios.get("https://bmtadmin.onrender.com/api/holiday-amendments");
 //     setData(res.data);
 //   };
 
@@ -36,9 +36,9 @@
 
 //   const handleSubmit = async () => {
 //     if (editId) {
-//       await axios.put(`http://localhost:9000/api/holiday-amendments/${editId}`, form);
+//       await axios.put(`https://bmtadmin.onrender.com/api/holiday-amendments/${editId}`, form);
 //     } else {
-//       await axios.post("http://localhost:9000/api/holiday-amendments", form);
+//       await axios.post("https://bmtadmin.onrender.com/api/holiday-amendments", form);
 //     }
 //     setForm({
 //       referenceNumber: "", amendmentId: "", amendmentType: "", amendmentStatus: "", package: "",
@@ -50,7 +50,7 @@
 //   };
 
 //   const handleDelete = async id => {
-//     await axios.delete(`http://localhost:9000/api/holiday-amendments/${id}`);
+//     await axios.delete(`https://bmtadmin.onrender.com/api/holiday-amendments/${id}`);
 //     fetchData();
 //   };
 
@@ -133,7 +133,7 @@ function HolidayAmendment() {
   // Fetch all amendments
   const fetchData = async () => {
     try {
-      const res = await axios.get("http://localhost:9000/api/holiday-amendments");
+      const res = await axios.get("https://bmtadmin.onrender.com/api/holiday-amendments");
       setData(res.data);
     } catch (err) {
       console.log("Fetch error:", err);
@@ -157,12 +157,12 @@ function HolidayAmendment() {
 
       if (editId) {
         await axios.put(
-          `http://localhost:9000/api/holiday-amendments/${editId}`,
+          `https://bmtadmin.onrender.com/api/holiday-amendments/${editId}`,
           safeForm
         );
       } else {
         await axios.post(
-          "http://localhost:9000/api/holiday-amendments",
+          "https://bmtadmin.onrender.com/api/holiday-amendments",
           safeForm
         );
       }
@@ -180,7 +180,7 @@ function HolidayAmendment() {
   const handleDelete = async (id) => {
     if (!window.confirm("Delete this amendment?")) return;
     try {
-      await axios.delete(`http://localhost:9000/api/holiday-amendments/${id}`);
+      await axios.delete(`https://bmtadmin.onrender.com/api/holiday-amendments/${id}`);
       fetchData();
     } catch (err) {
       console.log("Delete error:", err);

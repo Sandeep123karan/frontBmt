@@ -7,7 +7,7 @@
 //   const [services, setServices] = useState([]); // <-- Service list for dropdown
 
 //   useEffect(() => {
-//     axios.get('http://localhost:9000/api/suppliers')
+//     axios.get('https://bmtadmin.onrender.com/api/suppliers')
 //       .then(res => {
 //         setSuppliers(res.data);
 
@@ -103,7 +103,7 @@ const OfflineSupplier = () => {
 
   const fetchSuppliers = async () => {
     try {
-      const res = await axios.get('http://localhost:9000/api/suppliers');
+      const res = await axios.get('https://bmtadmin.onrender.com/api/suppliers');
       setSuppliers(res.data);
     } catch (err) {
       console.error(err);
@@ -121,9 +121,9 @@ const OfflineSupplier = () => {
   const handleSubmit = async () => {
     try {
       if (editingId) {
-        await axios.put(`http://localhost:9000/api/suppliers/${editingId}`, form);
+        await axios.put(`https://bmtadmin.onrender.com/api/suppliers/${editingId}`, form);
       } else {
-        await axios.post('http://localhost:9000/api/suppliers', form);
+        await axios.post('https://bmtadmin.onrender.com/api/suppliers', form);
       }
       setForm(initialForm);
       setEditingId(null);
@@ -143,7 +143,7 @@ const OfflineSupplier = () => {
   const handleDelete = async (id) => {
     if (!window.confirm('Delete this supplier?')) return;
     try {
-      await axios.delete(`http://localhost:9000/api/suppliers/${id}`);
+      await axios.delete(`https://bmtadmin.onrender.com/api/suppliers/${id}`);
       fetchSuppliers();
     } catch (err) {
       console.error(err);
@@ -153,7 +153,7 @@ const OfflineSupplier = () => {
   const toggleStatus = async (supplier) => {
     const newStatus = supplier.status === 'Active' ? 'Inactive' : 'Active';
     try {
-      await axios.put(`http://localhost:9000/api/suppliers/status/${supplier._id}`, {
+      await axios.put(`https://bmtadmin.onrender.com/api/suppliers/status/${supplier._id}`, {
         status: newStatus,
       });
       fetchSuppliers();

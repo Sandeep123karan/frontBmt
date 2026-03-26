@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const API = "http://localhost:9000/api/train-settings";
+const API = "https://bmtadmin.onrender.com/api/train-settings";
 
 export default function TrainSettings() {
   const [loading, setLoading] = useState(false);

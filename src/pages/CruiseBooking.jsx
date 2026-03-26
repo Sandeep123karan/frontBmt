@@ -13,7 +13,7 @@ function CruiseBooking() {
   const [editingId, setEditingId] = useState(null);
   const [showForm, setShowForm] = useState(false);
 
-  const API = "http://localhost:9000/api/cruise-bookings";
+  const API = "https://bmtadmin.onrender.com/api/cruise-bookings";
 
   // Fetch all bookings
   const fetchBookings = async () => {

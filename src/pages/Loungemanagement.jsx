@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const API = "http://localhost:9000/api/lounge";
+const API = "https://bmtadmin.onrender.com/api/lounge";
 const PER_PAGE = 8;
 
 const FACILITIES_LIST = [

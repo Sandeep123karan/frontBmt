@@ -117,7 +117,7 @@
 // import React, { useEffect, useState } from "react";
 // import axios from "axios";
 
-// const API = "http://localhost:9000/api/insurance-policies";
+// const API = "https://bmtadmin.onrender.com/api/insurance-policies";
 
 // function InsurancePolicies(){
 
@@ -286,7 +286,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const API = "http://localhost:9000/api/insurance-policies";
+const API = "https://bmtadmin.onrender.com/api/insurance-policies";
 
 function InsurancePolicies() {
 

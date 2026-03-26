@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 
-const API_BASE = "http://localhost:9000/api/lovehotels";
+const API_BASE = "https://bmtadmin.onrender.com/api/lovehotels";
 
 const blankRoom = {
   roomId: "", roomType: "", maxGuests: "", bedType: "",

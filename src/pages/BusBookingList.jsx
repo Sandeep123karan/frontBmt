@@ -1,7 +1,7 @@
 // import React, { useState, useEffect } from "react";
 // import axios from "axios";
 
-// const API_URL = "http://localhost:9000/api/bus-bookings"; 
+// const API_URL = "https://bmtadmin.onrender.com/api/bus-bookings"; 
 
 // function BusBooking() {
 //   const [bookings, setBookings] = useState([]);
@@ -144,8 +144,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const API = "http://localhost:9000/api/bus-bookings";
-const ROUTE_API = "http://localhost:9000/api/bus-routes";
+const API = "https://bmtadmin.onrender.com/api/bus-bookings";
+const ROUTE_API = "https://bmtadmin.onrender.com/api/bus-routes";
 
 export default function BusBooking() {
   const [bookings, setBookings] = useState([]);

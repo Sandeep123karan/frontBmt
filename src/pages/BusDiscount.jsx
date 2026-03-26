@@ -64,7 +64,7 @@ const BusDiscounts = () => {
   }, []);
 
   const fetchDiscounts = async () => {
-    const res = await axios.get("http://localhost:9000/api/bus-discounts");
+    const res = await axios.get("https://bmtadmin.onrender.com/api/bus-discounts");
     setDiscounts(res.data);
   };
 
@@ -80,12 +80,12 @@ const BusDiscounts = () => {
 
     if (editId) {
       await axios.put(
-        `http://localhost:9000/api/bus-discounts/${editId}`,
+        `https://bmtadmin.onrender.com/api/bus-discounts/${editId}`,
         payload
       );
       setEditId(null);
     } else {
-      await axios.post("http://localhost:9000/api/bus-discounts", payload);
+      await axios.post("https://bmtadmin.onrender.com/api/bus-discounts", payload);
     }
 
     setForm({ code: "", type: "percentage", value: "", expiryDate: "" });
@@ -93,7 +93,7 @@ const BusDiscounts = () => {
   };
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:9000/api/bus-discounts/${id}`);
+    await axios.delete(`https://bmtadmin.onrender.com/api/bus-discounts/${id}`);
     fetchDiscounts();
   };
 

@@ -55,7 +55,7 @@
 // function ManageCruise() {
 //   const [cruises, setCruises] = useState([]);
 
-//   const API = "http://localhost:9000/api/cruises";
+//   const API = "https://bmtadmin.onrender.com/api/cruises";
 
 //   // Fetch all cruises
 //   const fetchCruises = async () => {
@@ -147,7 +147,7 @@ import "./ManageCruise.css"; // ← SCOPED CSS
 function ManageCruise() {
   const [cruises, setCruises] = useState([]);
 
-  const API = "http://localhost:9000/api/cruises";
+  const API = "https://bmtadmin.onrender.com/api/cruises";
 
   const fetchCruises = async () => {
     try {
