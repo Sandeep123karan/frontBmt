@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const API = "http://127.0.0.1:9000/api/users";
+const API = "https://bmtadmin.onrender.com/api/users";
 
 export default function AuthPage() {
 
